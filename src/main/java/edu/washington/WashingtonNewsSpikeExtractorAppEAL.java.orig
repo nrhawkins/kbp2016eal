@@ -1,0 +1,808 @@
+/*******************************************************************************
+ * Raytheon BBN Technologies Corp., March 2013
+ * 
+ * THIS CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS
+ * OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+ * 
+ * Copyright 2013 Raytheon BBN Technologies Corp.  All Rights Reserved.
+ ******************************************************************************/
+// Next line is site-specific.
+package edu.washington;
+
+import java.io.IOException;
+import java.io.File;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.common.base.Optional;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+
+import adept.common.Document;
+import adept.common.DocumentEvent;
+import adept.common.DocumentEventArgument;
+import adept.common.Entity;
+import adept.common.EntityMention;
+import adept.common.HltContentContainer;
+import adept.common.Item;
+import adept.common.IType;
+import adept.common.KBID;
+import adept.common.OntType;
+import adept.common.Relation;
+import adept.common.TokenStream;
+
+import adept.utilities.CommandLineApp;
+
+import adept.module.AdeptModuleException;
+
+import adept.kbapi.KB;
+import adept.kbapi.KBConfigurationException;
+import adept.kbapi.KBEntity;
+import adept.kbapi.KBEvent;
+import adept.kbapi.KBOntologyMap;
+import adept.kbapi.KBOntologyModel;
+import adept.kbapi.KBParameters;
+import adept.kbapi.KBPredicateArgument;
+import adept.kbapi.KBTextProvenance;
+import adept.kbapi.KBRelation;
+import adept.kbapi.sparql.SparqlQueryBuilder;
+
+import edu.washington.cs.vinculum.pipeline.LinkingPipeline;
+
+import com.hp.hpl.jena.query.ResultSet;
+
+import com.bbn.kbp.events2014.TypeRoleFillerRealisSet;
+import com.bbn.bue.common.IntIDSequence;
+
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class WashingtonNewsSpikeExtractorApp.
+ */
+public class WashingtonNewsSpikeExtractorAppEAL extends CommandLineApp
+{
+ 	private static final long MEGABYTE = 1024L * 1024L;
+
+
+        IntIDSequence uniqueIntIDsArgs = IntIDSequence.startingFrom(1);
+        IntIDSequence uniqueIntIDsDocEvents = IntIDSequence.startingFrom(1);
+      
+	// The only site-specific members are config file and processor instance.	
+	private static String theAlgorithmConfig = "washington/src/main/resources/edu/washington/NewsSpikeExtractorConfig.xml";
+
+	private NewsSpikeExtractorKB extractor;
+	
+	public static void main(String[] args)
+	{
+		new WashingtonNewsSpikeExtractorAppEAL().Run(args, theAlgorithmConfig);
+	}
+	
+	// The rest is applicable to any subclass of CommandLineApp.
+
+
+	//protected void doActivate(String algorithmConfig)
+        public void doActivate(String algorithmConfig)
+	{
+		try {			
+
+
+			File f = new File(algorithmConfig);
+			if ( !f.exists())
+			{
+				// Hack for Eclipse
+				//System.out.println("Config file not found:  " + algorithmConfig);
+				algorithmConfig = "./edu/washington/NewsSpikeExtractorConfig.xml";
+//				System.out.println("WNSEAkb Hack for Eclipse:  " + algorithmConfig);
+				f = new File(algorithmConfig);
+			}					
+			if ( !f.exists())
+			{
+				// Hack for command line
+				//System.out.println("Config file not found:  " + f.getAbsolutePath());
+				//algorithmConfig = 
+				//"/homes/gws/lockardc/research/deft/deft/washington/target/classes/edu/washington/NewsSpikeExtractorConfig.xml";
+				//f = new File(algorithmConfig);
+			}
+			if ( !f.exists()) throw new RuntimeException("Config not found: " + algorithmConfig);
+			System.out.println("Config file found:  " + f.getAbsolutePath());		
+			//
+			extractor = new NewsSpikeExtractorKB();					
+			extractor.activate(algorithmConfig);			 			  
+		} catch (AdeptModuleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+//	protected void doDeactivate()
+	public void doDeactivate()
+	{
+		try {
+			extractor.deactivate();			
+		} catch (AdeptModuleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+
+  	public static long bytesToMegabytes(long bytes) {
+    		return bytes / MEGABYTE;
+  	}
+
+
+	/**
+	 * Creates the hlt content container.
+	 *
+	 * @param document the document
+	 * @return the hlt content container
+	 */
+
+//	protected HltContentContainer doProcess(Document document, HltContentContainer hltContentContainer)
+	public HltContentContainer doProcess(Document document, HltContentContainer hltContentContainer)
+	{
+
+                      
+                System.out.println("EAL: num token streams: " + document.getTokenStreamList().size());
+                System.out.println("EAL: first token: " + document.getDefaultTokenStream().get(0).getValue());
+                System.out.println("EAL: first token begin offset: " + document.getDefaultTokenStream().get(0).getCharOffset().getBegin());
+                String docString = document.toString();
+                System.out.println("EAL: " + docString);
+
+                System.exit(1);
+
+                String outputDirArgs = "/projects/WebWare9/nhawkins/eal/arguments/";
+                String outputDirDocEvents = "/projects/WebWare9/nhawkins/eal/linking/";
+                String outputDirCorpusEvents = "/projects/WebWare9/nhawkins/eal/corpus_linking/";                
+
+        	// eventTypeMap purpose: to add Type to the Subtype
+        	HashMap<String, String> eventTypeMap = new HashMap<String, String>();
+        	eventTypeMap.put("attack", "Conflict.Attack");
+        	eventTypeMap.put("broadcast", "Conflict.Broadcast");
+        	eventTypeMap.put("correspondence", "Contact.Correspondence");
+        	eventTypeMap.put("meet", "Contact.Meet");
+        	eventTypeMap.put("die", "Life.Die");
+        	eventTypeMap.put("transportperson", "Movement.Transportperson");
+        	eventTypeMap.put("endposition", "Personnel.EndPosition");
+        	eventTypeMap.put("startposition", "Personnel.StartPosition");
+        	eventTypeMap.put("transfermoney", "Transaction.TransferMoney");
+        	eventTypeMap.put("transferownership", "Transaction.TransferOwnership");
+
+        	// eventRoleMap purpose: to remove event Subtype from the Role
+        	HashMap<String, String> eventRoleMap = new HashMap<String, String>();
+        	eventRoleMap.put("attack.attacker", "Attacker");
+        	eventRoleMap.put("attack.target", "Target");
+        	eventRoleMap.put("broadcast.entity", "Entity");
+        	eventRoleMap.put("correspondence.entity", "Entity");
+        	eventRoleMap.put("meet.entity", "Entity");
+        	eventRoleMap.put("die.agent", "Agent");
+        	eventRoleMap.put("die.victim", "Victim");
+        	eventRoleMap.put("die.place", "Place");
+        	eventRoleMap.put("die.time", "Time");
+        	eventRoleMap.put("transportperson.destination", "Destination");
+        	eventRoleMap.put("transportperson.origin", "Origin");
+        	eventRoleMap.put("transportperson.person", "Person");
+        	eventRoleMap.put("endposition.entity", "Entity");
+        	eventRoleMap.put("endposition.person", "Person");
+        	eventRoleMap.put("startposition.entity", "Entity");
+        	eventRoleMap.put("startposition.person", "Person");
+        	eventRoleMap.put("transfermoney.giver", "Giver");
+        	eventRoleMap.put("transfermoney.money", "Money");
+        	eventRoleMap.put("transfermoney.recipient", "Recipient");
+        	eventRoleMap.put("transferownership.beneficiary", "Beneficiary");
+        	eventRoleMap.put("transferownership.giver", "Giver");
+
+
+                //KB kb = null;
+
+		try {
+
+                  String docId = document.getDocId();
+                  String argsFileName = outputDirArgs+docId;
+                  String docEventsFileName = outputDirDocEvents+docId;
+                  BufferedWriter bwArgs = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(argsFileName), "UTF-8"));
+                  BufferedWriter bwDocEvents = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(docEventsFileName), "UTF-8"));
+
+
+			// Create the HltContentContainer object
+			if(hltContentContainer==null) hltContentContainer = new HltContentContainer();
+
+
+//                        System.out.println("sparql: " + SparqlQueryBuilder.PREFIXES);
+//                        System.exit(0);
+
+//                        System.out.println("DocID: " + document.getDocId());
+//                        System.exit(0);
+
+                        // Get links
+//v                        TokenStream tokenStream = document.getDefaultTokenStream();
+//v  		        String text = tokenStream.getTextValue();
+
+                        // Calling vinculum
+//v                        System.out.println("WNSEA: Calling vinculum");
+//v                        String links = LinkingPipeline.runMain(text);
+
+
+//                        System.out.println("WNSEA: links: " + links);
+//                        System.out.println("WNSEA: calling vinculum");
+//                        String links = LinkingPipeline.runMain("Miami");
+//                        String links = LinkingPipeline.runMain("ksxprzt");
+//                        System.out.println("WNSEA: links: " + links);
+//                        String links = LinkingPipeline.runMain("Opal Winter");
+//                        System.out.println("WNSEA: links: " + links);
+
+                        // createStartOffsetLinksMap
+//v                        HashMap<Long, JSONObject> startOffsetLinksMap = createStartOffsetLinksMap(links);
+//v                        System.out.println("startOffsetLinksMap size: " + startOffsetLinksMap.size());
+
+//                        JSONObject wpidTest = startOffsetLinksMap.get(new Long(0));
+//                        if(wpidTest == null){
+//                           System.out.println("WNSEA: wpid null pointer");
+//                        }
+//                        Long testStart = 25l;
+//                        System.out.println("end for start 0 / should be 12: " + startOffsetLinksMap.get(new Long(0)).get("end")); 
+//                        System.out.println("end for start 25 / should be 33: " + startOffsetLinksMap.get(testStart).get("end")); 
+
+
+//			// Get the Java runtime
+//                        printMemoryStats();
+
+                        // ----------------------
+                        // DocId
+                        // ----------------------
+                        System.out.println("WNSEA: DocId: " + docId);
+			// Call newsspike to get DocumentEvents
+
+                                          
+                        if(!document.getDocId().equals("001")) {
+
+                        System.out.println("WNSEA: Calling NewsSpike Extractor");					
+			List<DocumentEvent> relations = this.extractor.process(document, hltContentContainer).getDocumentEvents();			
+			hltContentContainer.setDocumentEvents(relations);	
+                        // ----------------------
+                        // Number of Events
+                        // ----------------------	
+                        System.out.println("WNSEA # doc events: " + relations.size());
+     
+
+                        // Connect to the KB
+			//KBParameters kbParameters = new KBParameters();
+//			System.out.println("Triplestore: " + kbParameters.tripleStoreUrl);
+//			System.out.println("DB: " + kbParameters.metadataUrl);
+
+                        //KB kb = new KB(kbParameters);		
+                        //KBOntologyMap ontologyMap = KBOntologyMap.getRichEREOntologyMap();
+                        //KBOntologyMap ontologyMap = KBOntologyMap.loadOntologyMap("adept/kbapi/newsspike-to-adept.xml", 
+                        //"adept/kbapi/adept-to-newsspike.xml");		
+                        //KBOntologyMap ontologyMap = 
+                        //    KBOntologyMap.loadOntologyMap("washington/src/main/resources/edu/washington/extended_rere-to-adept.xml", 
+                        //    "washington/src/main/resources/edu/washington/adept-to-extended_rere.xml");		
+
+                        
+                        //int numberOfInsertedEvents = 0;
+                        // ------------------------------------------------------------
+                        // ------------------------------------------------------------
+                        // Go through DocumentEvents and Event Args
+                        // ------------------------------------------------------------
+                        // ------------------------------------------------------------
+                        for (DocumentEvent du : hltContentContainer.getDocumentEvents()){
+
+                            String duEventType = du.getEventType().getType();
+                            System.out.println("WNSEA: Checking KB with Event: " + duEventType + " " + duEventType.equals("NONE"));
+                            boolean validEvent=false;
+                            String duEventTypeSubtype = null;
+   
+                            if(eventTypeMap.containsKey(duEventType)){
+                               duEventTypeSubtype = eventTypeMap.get(duEventType);
+                               validEvent = true;
+                            }
+
+                            if(validEvent){
+
+            	            HashMap<Item, KBPredicateArgument> entityMap = new HashMap<Item, KBPredicateArgument>();
+
+                            bwDocEvents.write(uniqueIntIDsDocEvents.nextID() + "\t");
+
+                            // -------------------
+                            // Event Offsets
+                            // -------------------
+                            int eventBegin = du.getProvenances().asList().get(0).getEventText().getProvenanceChunks().asList().get(0).getCharOffset().getBegin();
+                            int eventEnd = du.getProvenances().asList().get(0).getEventText().getProvenanceChunks().asList().get(0).getCharOffset().getEnd();
+                            String eventOffsets = eventBegin + "-" + eventEnd;                                                         
+
+                            // ------------------
+                            // the Event Args
+                            // ------------------
+
+                            //String arg1Type = null;
+                            //String arg2Type = null;
+                            KBID arg1Id = null;
+                            KBID arg2Id = null;
+
+                            int argCount = 0;
+                            boolean argsValid = true;
+
+            	            for (DocumentEventArgument arg: du.getArguments()){
+            		        DocumentEventArgument.Filler duFiller = arg.getFiller();
+            		        Entity entity = duFiller.asEntity().get();
+            		        if (entity == null){
+            			    continue;
+            		        }
+                                String argRole = arg.getRole().getType();
+                              
+                               if(eventRoleMap.containsKey(argRole)){
+
+                                argRole = eventRoleMap.get(argRole);
+                                argCount = argCount + 1;
+                	        List<EntityMention> entityMentions = new ArrayList<EntityMention>();
+                	        entityMentions.add(entity.getCanonicalMention());
+
+                                int argId = uniqueIntIDsArgs.nextID();
+                                bwArgs.write(argId + "\t" + docId +"\t");
+                                bwDocEvents.write(argId + " ");
+                     
+                                bwArgs.write(duEventTypeSubtype + "\t");                        
+                                //bwArgs.write(duEventType + "\t");                       
+ 
+                                bwArgs.write(argRole + "\t");
+                                //bwArgs.write(entity.getEntityType().getType() + "\t");
+                                bwArgs.write(entity.getCanonicalMention().getValue() + "\t");
+                                int casOffsetsBegin = entity.getCanonicalMention().getCharOffset().getBegin();
+                                int casOffsetsEnd = entity.getCanonicalMention().getCharOffset().getEnd();
+                                String casOffsets = casOffsetsBegin + "-" + casOffsetsEnd;
+                                bwArgs.write(casOffsets + "\t");
+                                bwArgs.write(eventOffsets + "\t");
+                                bwArgs.write(casOffsets + "\t");
+                                bwArgs.write("NIL" + "\t");
+                                bwArgs.write("Actual" + "\t");
+                                bwArgs.write(entity.getEntityConfidence() + "\n");
+                                }
+                                System.out.println("EAL argRole: " + argRole);
+                                
+
+                                // ---------------------------------
+                                // Get Wikipedia link for entity
+                                // ---------------------------------
+//v                                long entityBeginOffset = (long)entity.getCanonicalMention().getCharOffset().getBegin();
+//v                                String wpid = getWikipediaLink(startOffsetLinksMap, entityBeginOffset);
+                                String wpid = null;
+
+                                // ----------------------------------------------------------------------
+                                // Update the KB by inserting a new entity or updating an existing one
+                                // ----------------------------------------------------------------------
+                                //KBEntity matchingKbEntity = null;
+                               
+                                System.out.println("WNSEA: entity getType: " + entity.getEntityType().getType());                                
+                                System.out.println("WNSEA: entity getValue: " + entity.getValue());                                
+
+                                if(!(entity.getEntityType().getType().equals("num")  || 
+                                     entity.getEntityType().getType().equals("date") || 
+                                     entity.getEntityType().getType().equals("mon")  || 
+                                     entity.getEntityType().getType().equals("time")  || 
+                                     entity.getEntityType().getType().equals("wkdy") )){
+                                    //matchingKbEntity = updateEntityKB(kb, wpid, entity, entityMentions, ontologyMap);
+                                } else { argsValid = false; }
+
+		                //entityMap.put(entity, matchingKbEntity);
+          
+                                if (argCount == 1 ) {
+                                    //arg1Type = entity.getValue();
+                                    //arg1Id = entity.getIdString();
+                                    arg1Id = null;
+                                    //if(matchingKbEntity != null) arg1Id = matchingKbEntity.getKBID();
+                                }
+                                if (argCount == 2 ) {
+                                    //arg2Type = entity.getValue();
+                                    //arg2Id = entity.getIdString();
+                                    arg2Id = null;
+                                    //if(matchingKbEntity != null) arg2Id = matchingKbEntity.getKBID();
+                                }
+
+                                // ------------------------
+                                // The End - for entities
+                                // ------------------------
+
+                                // ----------------------------------------------
+                                // Get KBEntities string matching Entity name
+                                // ----------------------------------------------
+            		        //List<KBEntity> kbEntities = kb.getEntitiesByStringReference(entity.getCanonicalMention().getValue());
+
+                                //System.out.println("WNSEA kb entities size: " + kbEntities.size());
+                                //System.out.println("WNSEA entityBeginOffset: " + entityBeginOffset);
+                                //System.out.println("WNSEA wpid: " + wpid);
+
+            		        //boolean found = false;
+            		        //KBEntity matchingKbEntity = null;
+            		        //for (KBEntity kbEntity : kbEntities){
+            			//    System.out.println("found match: " + entity.getCanonicalMention().getValue());
+            			//    found = true;
+            			//    matchingKbEntity = kbEntity;
+            		        //}
+            		        //if(!found){
+            		        //	KBEntity kbEntity = new kbEntity();
+            		        //}
+            		        // if no match:
+            		        //if (!found){
+                                    //System.out.println("WNSEA not found: " + entity.getCanonicalMention().getValue());
+            			    //KBEntity.InsertionBuilder entityInsertionBuilder = 
+                                    //    KBEntity.entityInsertionBuilder(entity, entityMentions, ontologyMap);
+				    //    matchingKbEntity = entityInsertionBuilder.insert(kb);
+	                        //}
+
+            	            }
+
+                        bwDocEvents.write("\n");
+
+                        //String duEventType = du.getEventType().getType();
+                        //System.out.println("WNSEA: Checking KB with Event: " + duEventType + " " + duEventType.equals("NONE"));
+                        
+
+                        if(!duEventType.equals("NONE") && argsValid){
+
+                        //List<KBEvent> kbEvents = kb.getEventsByStringReference(du.getEventType().getType());
+                        //System.out.println("WNSEA: Number of kbEvents: " + kbEvents.size());
+                        //OntType relationType = ontologyMap.getKBTypeForType(du.getEventType()).get();
+                        //String testType = relationType.getType();
+                        //List<KBEvent> kbEvents2 = kb.getEventsByType(relationType);
+                        //List<KBEvent> kbEvents3 = kb.getEventsByStringReference("chunkValue");
+                        //System.out.println("WNSEA: Number of kbEvents: " + testType + ": " + kbEvents2.size());
+
+
+                        // -----------------------------------------------------
+                        // Check if Event is in the KB
+                        // -----------------------------------------------------
+                        //boolean foundEvent = false;        
+
+                        //List<KBRelation> existingKBRelationsArgs = new ArrayList<KBRelation>();
+                        //List<KBEvent> existingKBEventsArgs = new ArrayList<KBEvent>();
+
+                        //if(arg1Id != null && arg2Id != null){
+                        //   existingKBRelationsArgs = kb.getRelationsByArgs(arg1Id,arg2Id);
+                        //   existingKBEventsArgs = kb.getEventsByArgs(arg1Id,arg2Id);
+                        //}
+                        
+                        //System.out.println("WNSEA: existingKBRelations args size: " + existingKBRelationsArgs.size());
+                        //System.out.println("WNSEA: existingKBEvents args size: " + existingKBEventsArgs.size());
+                        
+                        
+                        //if(existingKBRelationsArgs.size() > 0 || existingKBEventsArgs.size() > 0){ foundEvent = true;}
+
+                        //List<KBRelation> existingKBRelationsArg1 = kb.getRelationsByArg(arg1Id);
+                        //List<KBRelation> existingKBRelationsArg2 = kb.getRelationsByArg(arg2Id);
+                        //List<KBEvent> existingKBEventsArg1 = kb.getEventsByArg(arg1Id);
+                        //List<KBEvent> existingKBEventsArg2 = kb.getEventsByArg(arg2Id);
+                        //System.out.println("WNSEA: existingKBRelations arg1 size: " + existingKBRelationsArg1.size());
+                        //System.out.println("WNSEA: existingKBRelations arg2 size: " + existingKBRelationsArg2.size());
+                        //System.out.println("WNSEA: existingKBRelations args size: " + existingKBRelationsArgs.size());
+                        //System.out.println("WNSEA: existingKBEvents arg1 size: " + existingKBEventsArg1.size());
+                        //System.out.println("WNSEA: existingKBEvents arg2 size: " + existingKBEventsArg2.size());
+
+                         // --------------------------------------------------------------
+                         // Insert Event - event not already in KB
+                         // -------------------------------------------------------------- 
+                         //if(!foundEvent){
+
+			    //System.out.println("WNSEA: inserting event");
+
+            	            //KBEvent.InsertionBuilder insertionBuilder = KBEvent.eventInsertionBuilder(du, entityMap, ontologyMap);
+            	            //KBEvent insertedEvent = insertionBuilder.insert(kb);
+
+                            //numberOfInsertedEvents = numberOfInsertedEvents + 1;
+
+                            //System.out.println("WNSEA: inserted event: " + insertedEvent.getKBID().getObjectID());
+                            //System.out.println("WNSEA: get event by id: " + 
+                            //    kb.getEventById(insertedEvent.getKBID()).getKBID().getObjectID());
+                            //System.out.println("WNSEA: get event by id: event name: " + 
+                            //    kb.getEventById(insertedEvent.getKBID()).getType().getType());
+
+                        //} 
+                        // --------------------------------------------------------------
+                        // Update Event - event already in KB
+                        // -------------------------------------------------------------- 
+                        //else{
+			    //System.out.println("WNSEA: update event");
+
+                            // --------------------
+                            // Get Event KBID
+                            // --------------------
+                            //resultSet.next();
+                            //String eventStringId = resultSet.getString("adept-data:currentRelationId");
+                            //String eventNamespace = "http://adept-kb.bbn.com/adept-data#";
+                            //KBEvent existingEvent = kb.getEventById(new KBID(eventStringId, eventNamespace)); 
+                            // ---------------------------------------                                                       
+                            // Proceed with updating existing event
+                            // ---------------------------------------
+            	            //KBEvent.UpdateBuilder updateBuilder = KBEvent.updateBuilder();
+                            // 
+                            //Can update: event mentions, arg mentions, event conf, arg conf
+                            // 
+            	            //KBEvent updatedEvent = updateBuilder.update(kb);
+
+
+
+                        //}
+
+                      } // valid event type
+                      System.out.println("WNSEA: Moving on to next event");
+
+                      } //validEvent (i.e. in eventTypeMap)
+                      
+                    } // event loop
+
+                    //printMemoryStats();
+                    //System.out.println("WNSEA: Number of inserted events: " + numberOfInsertedEvents);
+
+            //kb.close();
+
+            } //if(docId != "001")
+
+            bwArgs.close();
+            bwDocEvents.close();
+
+	    return hltContentContainer;					
+           
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+          
+
+	    return null;
+
+             
+            // reference:
+            //System.out.println("WNSEA entity: " + entity.getCanonicalMention().getValue());
+            //System.out.println("WNSEA entity offsets (begin,end): ");
+            //System.out.print("(" + entity.getCanonicalMention().getCharOffset().getBegin());
+            //System.out.println(", " + entity.getCanonicalMention().getCharOffset().getEnd() + ")" );     
+
+	}
+
+        private void printMemoryStats(){
+
+            Runtime runtime = Runtime.getRuntime();
+    	    // Calculate the used memory
+            long memory = runtime.totalMemory() - runtime.freeMemory();
+            System.out.println("Total memory is: " + bytesToMegabytes(runtime.totalMemory()));
+    	    System.out.println("Used memory is megabytes: "+ bytesToMegabytes(memory));
+    	    // Run the garbage collector
+            runtime.gc();
+    	    // Calculate the used memory
+    	    memory = runtime.totalMemory() - runtime.freeMemory();
+    	    System.out.println("Total memory is: " + bytesToMegabytes(runtime.totalMemory()));    			
+    	    System.out.println("Used memory is megabytes: "+ bytesToMegabytes(memory));
+
+        }
+
+
+        private HashMap<Long, JSONObject> createStartOffsetLinksMap(String links){
+
+            HashMap<Long, JSONObject> startOffsetLinksMap = new HashMap<Long, JSONObject>();                        
+
+            //System.out.println("startOffsetLinksMap size: " + startOffsetLinksMap.size());
+         
+            try {
+
+            // decode JSON in links String, each element in linksArray is a JSONObject of vinculum links data for an entity
+            JSONParser parser = new JSONParser();
+            Object obj = parser.parse(links);
+            JSONArray linksArray = (JSONArray)obj;
+
+
+            // put each JSONObject of vinculum link data into a hashmap, where key=startOffset of entity
+            for(Object link : linksArray){
+                //System.out.println(link);
+                JSONObject linkObject = (JSONObject)link;
+                Long startOffset = (Long)linkObject.get("start");
+                // TODO: question -> do we need to incorporate the end offset too?
+                Long endOffset = (Long)linkObject.get("end"); 
+                //System.out.println("Start, End: " + startOffset + ", " + endOffset);
+                startOffsetLinksMap.put(startOffset, linkObject);                        
+            }                        
+
+            } catch (Exception e){
+               e.printStackTrace();
+            }
+              
+            //System.out.println("startOffsetLinksMap size: " + startOffsetLinksMap.size());
+
+            return startOffsetLinksMap;
+
+        }
+
+        private String getWikipediaLink(HashMap<Long,JSONObject> linksMap, long startOffset){
+
+           String wikipediaLink = "";
+
+
+           if(linksMap.get(startOffset)!=null){       
+              wikipediaLink = linksMap.get(startOffset).get("wpid").toString();            
+           }
+
+           return wikipediaLink;
+
+        }
+
+        private KBEntity updateEntityKB(KB kb, String wpid, Entity currentEntity, List<EntityMention> currentEntityMentions, 
+           KBOntologyMap ontologyMap){
+
+           KBEntity matchingKbEntity = null;
+
+          try{
+     
+          // ----------------------------------
+          // if wpid (Wikipedia ID) exists
+          // ----------------------------------
+          if(wpid != null && wpid != ""){
+
+             KBID externalKBId = new KBID(wpid, "http://adept-kb.bbn.com/adept-data#");
+             //System.out.println("WNSEA external kbid: " + externalKBId.getObjectID());
+             //System.out.println("WNSEA external sourceKB: " + externalKBId.getKBNamespace());
+
+             // --------------------------
+             // check if wpid is in KB
+             // --------------------------             
+             Optional<KBPredicateArgument> kbObject = kb.getKBObjectByExternalID(externalKBId);
+
+             // -----------------------------------
+             // if wpid is in KB, update entity
+             // -----------------------------------
+             if(kbObject.isPresent()){
+
+                KBID adeptKBID = kbObject.get().getKBID();
+
+                System.out.println("WNSEA update KB: Has wpid, wpid in KB, Update");    
+
+                // ------------------------------------
+                // KBEntity and entityUpdateBuilder
+                // ------------------------------------
+                
+                KBEntity kbEntity = kb.getEntityById(adeptKBID);
+                matchingKbEntity = kbEntity;
+
+//                KBEntity.UpdateBuilder entityUpdateBuilder = kbEntity.updateBuilder();
+//                entityUpdateBuilder.setConfidence((float)currentEntity.getEntityConfidence());
+                
+//		KBTextProvenance.InsertionBuilder canonicalMentionBuilder = KBTextProvenance.builder(currentEntity.getCanonicalMention(), 
+//                  new OntType(KBOntologyModel.ONTOLOGY_CORE_PREFIX, currentEntity.getCanonicalMention().getMentionType().getType()), 
+//                  currentEntity.getCanonicalMentionConfidence());
+
+//      		entityUpdateBuilder.addProvenance(canonicalMentionBuilder);
+//                entityUpdateBuilder.setNewCanonicalMention(canonicalMentionBuilder, currentEntity.getCanonicalMentionConfidence());
+
+//                for (IType type : currentEntity.getAllTypes()) {
+
+//                   OntType ontType = new OntType(KBOntologyModel.ONTOLOGY_CORE_PREFIX, type.getType());
+
+//                   if (entityUpdateBuilder.getUpdatedTypes.contains(ontType)) {
+
+//                      entityUpdateBuilder.alterTypeConfidence(ontType, currentEntity.getAllTypes().get(type));
+
+//                   } else {
+
+//                      entityUpdateBuilder.addNewType(ontType, currentEntity.getAllTypes().get(type));
+
+//                   }
+
+//                }
+
+//                Final Step: Update the KB
+//                KBEntity updatedEntity = entityUpdateBuilder.update(kb);
+ 
+             }
+             // -------------------------------------
+             // if wpid is NOT in KB, insert entity
+             // -------------------------------------
+             else{
+
+	        System.out.println("WNSEA update KB: Has wpid, wpid not in KB, Insert");
+
+                KBEntity.InsertionBuilder insertionBuilder = KBEntity.entityInsertionBuilder(currentEntity, 
+                   currentEntityMentions, ontologyMap);
+  
+  		// So far, just dealing with one external KBID, the wpid
+                // for (KBID externalKBId : externalKBIds) {}                  
+                insertionBuilder.addExternalKBId(externalKBId);
+
+                // Final Step: insert into KB
+                KBEntity insertedEntity = insertionBuilder.insert(kb);
+                matchingKbEntity = insertedEntity;
+                
+             }
+          } 
+          // -----------------------------------------
+          // if wpid (Wikipedia ID) does NOT exist,
+          // -----------------------------------------
+          else{            
+
+             String entityName = currentEntity.getCanonicalMention().getValue();
+             List<KBEntity> kbEntities = kb.getEntitiesByStringReference(entityName);
+
+             // --------------------------------------------------------
+             // if entity name is in the DB, select an entity & update
+             // --------------------------------------------------------
+             if(kbEntities != null && kbEntities.size() > 0){
+
+	        System.out.println("WNSEA update KB: no wpid / entity name in KB / Update");
+
+                // ------------------------------------
+                // KBEntity and entityUpdateBuilder
+                // ------------------------------------
+
+                // For now, just take first one
+                KBEntity kbEntity = kbEntities.get(0);
+                matchingKbEntity = kbEntity;
+
+                KBEntity.UpdateBuilder entityUpdateBuilder = kbEntity.updateBuilder();
+                entityUpdateBuilder.setConfidence((float)currentEntity.getEntityConfidence());
+
+//                KBTextProvenance.InsertionBuilder canonicalMentionBuilder = KBTextProvenance.builder(currentEntity.getCanonicalMention(),
+//                  new OntType(KBOntologyModel.ONTOLOGY_CORE_PREFIX, currentEntity.getCanonicalMention().getMentionType().getType()),
+//                  (float)currentEntity.getCanonicalMentionConfidence());
+
+//                entityUpdateBuilder.addProvenance(canonicalMentionBuilder);
+//                entityUpdateBuilder.setNewCanonicalMention(canonicalMentionBuilder, currentEntity.getCanonicalMentionConfidence());
+
+//                for (IType type : currentEntity.getAllTypes()) {
+
+//                   OntType ontType = new OntType(KBOntologyModel.ONTOLOGY_CORE_PREFIX, type.getType());
+
+//                   if (entityUpdateBuilder.getUpdatedTypes.contains(ontType)) {
+
+//                      entityUpdateBuilder.alterTypeConfidence(ontType, currentEntity.getAllTypes().get(type));
+
+//                   } else {
+
+//                      entityUpdateBuilder.addNewType(ontType, currentEntity.getAllTypes().get(type));
+
+//                   }
+
+//                }
+
+//                Final Step: Update the KB
+//                KBEntity updatedEntity = entityUpdateBuilder.update(kb);
+                
+             }
+             // --------------------------------------------------------
+             // if entity name is NOT in the DB, insert
+             // --------------------------------------------------------
+             else{
+
+	        System.out.println("WNSEA update KB: no wpid / entity name not in KB / Insert");
+
+                KBEntity.InsertionBuilder insertionBuilder = KBEntity.entityInsertionBuilder(currentEntity, 
+                   currentEntityMentions, ontologyMap);
+
+                // Final Step: insert into KB
+                KBEntity insertedEntity = insertionBuilder.insert(kb);
+                matchingKbEntity = insertedEntity;
+
+             }
+          } 
+
+ 
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+                                         
+
+      return matchingKbEntity;
+
+   }
+
+
+}
+

@@ -1,0 +1,792 @@
+[INFO] Scanning for projects...
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/apache/maven/plugins/maven-metadata.xml
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/thirdpartySnapshots/org/codehaus/mojo/maven-metadata.xml
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/thirdpartySnapshots/org/apache/maven/plugins/maven-metadata.xml
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/codehaus/mojo/maven-metadata.xml
+3/13 KB   2/20 KB   3/13 KB   6/20 KB   7/13 KB   6/20 KB   7/13 KB                       6/20 KB   11/13 KB   10/20 KB   11/13 KB   10/20 KB   13/13 KB   14/20 KB   13/13 KB   14/20 KB   13/13 KB   16/20 KB   13/13 KB   18/20 KB   13/13 KB   20/20 KB   13/13 KB                         Downloaded: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/apache/maven/plugins/maven-metadata.xml (13 KB at 23.6 KB/sec)
+                      Downloaded: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/codehaus/mojo/maven-metadata.xml (20 KB at 33.0 KB/sec)
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/codehaus/mojo/exec-maven-plugin/maven-metadata.xml
+Downloading: http://deftpack.bbn.com:8081/nexus/content/repositories/thirdpartySnapshots/org/codehaus/mojo/exec-maven-plugin/maven-metadata.xml
+                      710/710 B                         Downloaded: http://deftpack.bbn.com:8081/nexus/content/repositories/central/org/codehaus/mojo/exec-maven-plugin/maven-metadata.xml (710 B at 1.8 KB/sec)
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building kbp2016eal 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.5.0:java (default-cli) @ kbp2016eal ---
+RunKBP2016EAL
+Input File List: /projects/WebWare9/nhawkins/ealInput/akTestFileListSix
+Input Directory: /projects/WebWare9/nhawkins/ealInput/akTestSix/
+Output Directory: /projects/WebWare9/nhawkins/ealOutput/akTestSix/
+Number of Input Files: 6
+fileName: NYT_ENG_20131210.0203.xml
+docId: NYT_ENG_20131210.0203
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 160
+length docTagSpaces: 160
+docString length: 3145
+cleanString length: 3145
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/NYT_ENG_20131210.0203.xml
+Document: 
+<DOC id="NYT_ENG_20131210.0203" type="story" from_file="/newswire/daily_process/nyt/english/source_data/20131210/20131210,c42a434fa01ed2a30918d0b7590500eb.xml">
+<HEADLINE>
+UKRAINE'S FORCES MOVE AGAINST PROTESTERS, DIMMING HOPES FOR TALKS
+</HEADLINE>
+<TEXT>
+<P>
+EDS: SUBS for complete writethru; NEW headline.) ; (This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+</P>
+<P>
+KIEV, Ukraine - Ominous new action by Ukraine’s security forces on Monday, including a raid on an opposition party’s headquarters, appeared to diminish prospects for talks between the government and protest leaders, as Western officials grasped for a way to defuse the country’s intensifying political crisis.
+</P>
+<P>
+In a sign of mounting alarm, Vice President Joe Biden and President José Manuel Barroso of the European Commission each called Ukraine’s besieged president, Viktor F. Yanukovych, to warn him against unleashing force on a mass demonstration movement in its third week. Senior envoys, including the European foreign affairs chief, Catherine Ashton, and an assistant secretary of state, Victoria Nuland, were dispatched in an effort to ease tensions.
+</P>
+<P>
+The renewed diplomatic maneuvering was intended to prevent a repeat of the bloodshed during a violent crackdown by the police on Nov. 30 and to contain the widening civil uprising, which has plunged this nation of 46 million into deep uncertainty. Caught in a tug of war between European and Russian interests, Ukraine faces a severe economic crisis and is in immediate need of an aid package that is unlikely to materialize while thousands of protesters and riot police officers are massed in the streets.
+</P>
+<P>
+In a meeting with senior Kremlin officials in Moscow on Monday, the State Department said, Nuland “urged Russia to use its influence to press for peace, human dignity and a political solution” and stressed Ukraine’s need for “a return to economic health with the support of the International Monetary Fund.”
+</P>
+<P>
+The authorities seemed to lose control of Kiev on Sunday night after a huge rally of hundreds of thousands of people in Independence Square. On Monday, police forces and Interior Ministry troops were redeployed and began efforts to push protesters out of streets near main government buildings, including the presidential headquarters. Battalions of officers moved in and took up positions just outside the square’s perimeters, and by late Monday they had surrounded small encampments of protesters in the governmental quarter of the capital. After midnight, they began clearing those camps and cut off electricity to the occupied City Hall.
+</P>
+<P>
+On Monday evening, Ukrainian security forces raided the headquarters of an opposition party, Fatherland, and seized computer servers.
+</P>
+<P>
+The party’s parliamentary leader, Arseniy P. Yatsenyuk, is one of the main organizers of the protest movement, which ballooned in recent days to dominate the streets of Kiev and pressure Yanukovych after he refused to sign a political and trade pact with the European Union.
+</P>
+</TEXT>
+</DOC>
+
+Document: 
+                                                                                                                                                                
+          
+UKRAINE'S FORCES MOVE AGAINST PROTESTERS, DIMMING HOPES FOR TALKS
+           
+      
+   
+EDS: SUBS for complete writethru; NEW headline.) ; (This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+    
+   
+KIEV, Ukraine - Ominous new action by Ukraine’s security forces on Monday, including a raid on an opposition party’s headquarters, appeared to diminish prospects for talks between the government and protest leaders, as Western officials grasped for a way to defuse the country’s intensifying political crisis.
+    
+   
+In a sign of mounting alarm, Vice President Joe Biden and President José Manuel Barroso of the European Commission each called Ukraine’s besieged president, Viktor F. Yanukovych, to warn him against unleashing force on a mass demonstration movement in its third week. Senior envoys, including the European foreign affairs chief, Catherine Ashton, and an assistant secretary of state, Victoria Nuland, were dispatched in an effort to ease tensions.
+    
+   
+The renewed diplomatic maneuvering was intended to prevent a repeat of the bloodshed during a violent crackdown by the police on Nov. 30 and to contain the widening civil uprising, which has plunged this nation of 46 million into deep uncertainty. Caught in a tug of war between European and Russian interests, Ukraine faces a severe economic crisis and is in immediate need of an aid package that is unlikely to materialize while thousands of protesters and riot police officers are massed in the streets.
+    
+   
+In a meeting with senior Kremlin officials in Moscow on Monday, the State Department said, Nuland “urged Russia to use its influence to press for peace, human dignity and a political solution” and stressed Ukraine’s need for “a return to economic health with the support of the International Monetary Fund.”
+    
+   
+The authorities seemed to lose control of Kiev on Sunday night after a huge rally of hundreds of thousands of people in Independence Square. On Monday, police forces and Interior Ministry troops were redeployed and began efforts to push protesters out of streets near main government buildings, including the presidential headquarters. Battalions of officers moved in and took up positions just outside the square’s perimeters, and by late Monday they had surrounded small encampments of protesters in the governmental quarter of the capital. After midnight, they began clearing those camps and cut off electricity to the occupied City Hall.
+    
+   
+On Monday evening, Ukrainian security forces raided the headquarters of an opposition party, Fatherland, and seized computer servers.
+    
+   
+The party’s parliamentary leader, Arseniy P. Yatsenyuk, is one of the main organizers of the protest movement, which ballooned in recent days to dominate the streets of Kiev and pressure Yanukovych after he refused to sign a political and trade pact with the European Union.
+    
+       
+      
+
+fileName: NYT_ENG_20130828.0147.xml
+docId: NYT_ENG_20130828.0147
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 160
+length docTagSpaces: 160
+docString length: 3179
+cleanString length: 3179
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/NYT_ENG_20130828.0147.xml
+Document: 
+<DOC id="NYT_ENG_20130828.0147" type="story" from_file="/newswire/daily_process/nyt/english/source_data/20130828/20130828,971c3a5906496e0acc9e89664454abc7.xml">
+<HEADLINE>
+FORMER JPMORGAN EMPLOYEE SURRENDERS IN 'LONDON WHALE' CASE
+</HEADLINE>
+<TEXT>
+<P>
+EDS: SUBS throughout with new writing, NO PICKUP; SUBS headline; CHANGES order of byline.) ; (This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+</P>
+<P>
+Weeks after the U.S. government charged Javier Martin-Artajo, a former JPMorgan Chase employee, with hiding trading losses that ultimately reached more than $6 billion, he had his first day in court Tuesday as he surrendered to Spanish authorities and kicked off what could be a lengthy extradition process.
+</P>
+<P>
+Martin-Artajo, a Spaniard who worked in the bank’s London office, was released soon after his surrender and arrest. He agreed to remain at the disposal of the Spanish judiciary, but it was unclear whether his passport was confiscated to prevent him from leaving the country, according to a person briefed on the matter.
+</P>
+<P>
+The criminal charges stem from a risky bet at JPMorgan’s chief investment office in London, where Martin-Artajo worked. The bet involved so-called credit derivatives, which allow traders to bet on the perceived health of companies like American Airlines.
+</P>
+<P>
+When the bet soured in the spring of 2012, prosecutors claim, Martin-Artajo and Julien Grout, a lower-ranking employee, deliberately overstated the value of their positions to hide hundreds of millions of dollars in losses. The two were charged with wire fraud, falsifying bank records and contributing to false regulatory filings. Prosecutors also charged them with conspiracy to commit those crimes.
+</P>
+<P>
+The arrest in Spain, the latest development in an episode that left a rare stain on JPMorgan’s once-stellar reputation, underscores the challenge U.S. authorities face in their pursuit of the traders. After announcing charges this month against Martin-Artajo and Grout, federal prosecutors and the FBI in Manhattan have encountered logistical hurdles.
+</P>
+<P>
+British police issued an arrest warrant for Martin-Artajo at the behest of authorities in New York, and then visited his house in London only to find that he was gone. According to his lawyers, Martin-Artajo left London “on a long-planned vacation” to his native Spain without knowing of the pending charges.
+</P>
+<P>
+Grout, for his part, left London this year for his native France, which typically does not extradite its citizens. His lawyer, Edward Little, explained that his client also spent a brief period in the U.S., where his wife’s family lives.
+</P>
+<P>
+According to a person close to the case, both of the former traders have indicated through their lawyers that they are open to extradition but only if prosecutors recommend bail.
+</P>
+<P>
+Prosecutors have not charged a third trader, nicknamed “the London Whale.” That trader, Bruno Iksil, has reached a deal with the authorities in Manhattan that will spare him charges as long as he cooperates against his two former colleagues.
+</P>
+</TEXT>
+</DOC>
+
+Document: 
+                                                                                                                                                                
+          
+FORMER JPMORGAN EMPLOYEE SURRENDERS IN 'LONDON WHALE' CASE
+           
+      
+   
+EDS: SUBS throughout with new writing, NO PICKUP; SUBS headline; CHANGES order of byline.) ; (This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+    
+   
+Weeks after the U.S. government charged Javier Martin-Artajo, a former JPMorgan Chase employee, with hiding trading losses that ultimately reached more than $6 billion, he had his first day in court Tuesday as he surrendered to Spanish authorities and kicked off what could be a lengthy extradition process.
+    
+   
+Martin-Artajo, a Spaniard who worked in the bank’s London office, was released soon after his surrender and arrest. He agreed to remain at the disposal of the Spanish judiciary, but it was unclear whether his passport was confiscated to prevent him from leaving the country, according to a person briefed on the matter.
+    
+   
+The criminal charges stem from a risky bet at JPMorgan’s chief investment office in London, where Martin-Artajo worked. The bet involved so-called credit derivatives, which allow traders to bet on the perceived health of companies like American Airlines.
+    
+   
+When the bet soured in the spring of 2012, prosecutors claim, Martin-Artajo and Julien Grout, a lower-ranking employee, deliberately overstated the value of their positions to hide hundreds of millions of dollars in losses. The two were charged with wire fraud, falsifying bank records and contributing to false regulatory filings. Prosecutors also charged them with conspiracy to commit those crimes.
+    
+   
+The arrest in Spain, the latest development in an episode that left a rare stain on JPMorgan’s once-stellar reputation, underscores the challenge U.S. authorities face in their pursuit of the traders. After announcing charges this month against Martin-Artajo and Grout, federal prosecutors and the FBI in Manhattan have encountered logistical hurdles.
+    
+   
+British police issued an arrest warrant for Martin-Artajo at the behest of authorities in New York, and then visited his house in London only to find that he was gone. According to his lawyers, Martin-Artajo left London “on a long-planned vacation” to his native Spain without knowing of the pending charges.
+    
+   
+Grout, for his part, left London this year for his native France, which typically does not extradite its citizens. His lawyer, Edward Little, explained that his client also spent a brief period in the U.S., where his wife’s family lives.
+    
+   
+According to a person close to the case, both of the former traders have indicated through their lawyers that they are open to extradition but only if prosecutors recommend bail.
+    
+   
+Prosecutors have not charged a third trader, nicknamed “the London Whale.” That trader, Bruno Iksil, has reached a deal with the authorities in Manhattan that will spare him charges as long as he cooperates against his two former colleagues.
+    
+       
+      
+
+fileName: NYT_ENG_20130625.0044.xml
+docId: NYT_ENG_20130625.0044
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 160
+length docTagSpaces: 160
+docString length: 2978
+cleanString length: 2978
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/NYT_ENG_20130625.0044.xml
+Document: 
+<DOC id="NYT_ENG_20130625.0044" type="story" from_file="/newswire/daily_process/nyt/english/source_data/20130625/20130625,29784f391c76d2be664f6051f4501a5c.xml">
+<HEADLINE>
+VIGIL FOR MANDELA CONTINUES AS FAMILY MEMBERS HOLD EMERGENCY MEETING
+</HEADLINE>
+<TEXT>
+<P>
+This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+</P>
+<P>
+JOHANNESBURG - Singing crowds gathered outside the hospital where Nelson Mandela, South Africa’s former president, lay in a critical state for a third consecutive day Tuesday, as family members held an emergency meeting at his ancestral village.
+</P>
+<P>
+Mandela’s eldest daughter, Makaziwe, at least two grandchildren and clan elders gathered at Mandela’s retirement house in Qunu, the remote southern village where he grew up, according to news media reports.
+</P>
+<P>
+The subject of the meeting was not publicly disclosed, but Naplisi Mandela, an elder of the Mandela family, told the South African Press Association that they had gathered to discuss “delicate matters” - a euphemism widely interpreted to mean preparations for Mandela’s death.
+</P>
+<P>
+Meanwhile, in Pretoria, doctors continued to treat Mandela for a lung ailment that he contracted on Robben Island, the notorious apartheid-era prison where he spent much of his 27 years behind bars until his release in 1990. He was hospitalized June 8, his fourth hospitalization since late last year.
+</P>
+<P>
+In a statement, President Jacob Zuma said Mandela’s condition was unchanged. On Sunday, he visited Mandela and pronounced that his state had deteriorated from stable to critical.
+</P>
+<P>
+Noting that Mandela’s 95th birthday is on July 18, Zuma urged South Africans to celebrate his achievements. Still, after 18 days of anxious vigil, many appeared to be steeling themselves for the worst.
+</P>
+<P>
+Larger-than-usual crowds gathered at the gates of the Mediclinic Heart Hospital to pay tribute to Mandela, as people dropped off cards at a growing shrine and sang songs. “There is no one like you, Nelson Mandela,” one group sang in the Sotho language.
+</P>
+<P>
+The emotional scenes were part of a perceptible shift in the national mood. Until recently, many South Africans had avoided talking about Mandela’s fate, calling it culturally inappropriate to speculate about any ailing figure, much less one as revered as Mandela, who played a central role in South Africa’s transition from white-led minority rule to historic multirace elections in 1994.
+</P>
+<P>
+But now many are openly talking about the prospect of bidding him farewell.
+</P>
+<P>
+Mandela’s declining condition came as President Barack Obama prepared to arrive in South Africa on Friday on the second leg of an African tour that will also take him to Tanzania and Senegal. But the South African government said a planned meeting between Obama and Mandela - both the first black leaders of their countries - now looked unlikely.
+</P>
+</TEXT>
+</DOC>
+
+Document: 
+                                                                                                                                                                
+          
+VIGIL FOR MANDELA CONTINUES AS FAMILY MEMBERS HOLD EMERGENCY MEETING
+           
+      
+   
+This article is part of TIMES EXPRESS. It is a condensed version of a story that will appear in tomorrow’s New York Times.);
+    
+   
+JOHANNESBURG - Singing crowds gathered outside the hospital where Nelson Mandela, South Africa’s former president, lay in a critical state for a third consecutive day Tuesday, as family members held an emergency meeting at his ancestral village.
+    
+   
+Mandela’s eldest daughter, Makaziwe, at least two grandchildren and clan elders gathered at Mandela’s retirement house in Qunu, the remote southern village where he grew up, according to news media reports.
+    
+   
+The subject of the meeting was not publicly disclosed, but Naplisi Mandela, an elder of the Mandela family, told the South African Press Association that they had gathered to discuss “delicate matters” - a euphemism widely interpreted to mean preparations for Mandela’s death.
+    
+   
+Meanwhile, in Pretoria, doctors continued to treat Mandela for a lung ailment that he contracted on Robben Island, the notorious apartheid-era prison where he spent much of his 27 years behind bars until his release in 1990. He was hospitalized June 8, his fourth hospitalization since late last year.
+    
+   
+In a statement, President Jacob Zuma said Mandela’s condition was unchanged. On Sunday, he visited Mandela and pronounced that his state had deteriorated from stable to critical.
+    
+   
+Noting that Mandela’s 95th birthday is on July 18, Zuma urged South Africans to celebrate his achievements. Still, after 18 days of anxious vigil, many appeared to be steeling themselves for the worst.
+    
+   
+Larger-than-usual crowds gathered at the gates of the Mediclinic Heart Hospital to pay tribute to Mandela, as people dropped off cards at a growing shrine and sang songs. “There is no one like you, Nelson Mandela,” one group sang in the Sotho language.
+    
+   
+The emotional scenes were part of a perceptible shift in the national mood. Until recently, many South Africans had avoided talking about Mandela’s fate, calling it culturally inappropriate to speculate about any ailing figure, much less one as revered as Mandela, who played a central role in South Africa’s transition from white-led minority rule to historic multirace elections in 1994.
+    
+   
+But now many are openly talking about the prospect of bidding him farewell.
+    
+   
+Mandela’s declining condition came as President Barack Obama prepared to arrive in South Africa on Friday on the second leg of an African tour that will also take him to Tanzania and Senegal. But the South African government said a planned meeting between Obama and Mandela - both the first black leaders of their countries - now looked unlikely.
+    
+       
+      
+
+fileName: c06e8bbdf69f73a69cd3d5dbb4d06a21.mpdf.xml
+docId: c06e8bbdf69f73a69cd3d5dbb4d06a21
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 43
+length docTagSpaces: 43
+docString length: 933
+cleanString length: 933
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/c06e8bbdf69f73a69cd3d5dbb4d06a21.mpdf.xml
+Document: 
+<doc id="c06e8bbdf69f73a69cd3d5dbb4d06a21">
+<headline> </headline>
+<post author="RockaFowler" datetime="2012-01-02T11:29:00" id="p1">
+<a href="http://espn.go.com/nfl/story/_/id/7413773/st-louis-rams-fire-coach-steve-spagnuolo-gm-billy-devaney-too">http://espn.go.com/nfl/story/_/id/7413773/st-louis-rams-fire-coach-steve-spagnuolo-gm-billy-devaney-too</a>
+
+The St. Louis Rams fired coach Steve Spagnuolo and general manager Billy Devaney, the team announced on Monday.
+
+The 52-year-old Spagnuolo was just 10-38 in three seasons in St. Louis after being hired in January 2009. Devaney, 56, was promoted to general manager in December 2008.
+
+Who's next?? And is Spagnuolo that good of a Defensive Coach to now be wanted by everyone?????
+</post>
+<post author="ScreamingMeemie" datetime="2012-01-02T13:09:00" id="p2">
+1. I don't think Norv is going to make it. I still don't get what everyone sees in him as a head coach.
+</post>
+</doc>
+
+Document: 
+                                           
+                      
+      author="RockaFowler" datetime="2012-01-02T11:29:00" id="p1" 
+        "http://espn.go.com/nfl/story/_/id/7413773/st-louis-rams-fire-coach-steve-spagnuolo-gm-billy-devaney-too" http://espn.go.com/nfl/story/_/id/7413773/st-louis-rams-fire-coach-steve-spagnuolo-gm-billy-devaney-too    
+
+The St. Louis Rams fired coach Steve Spagnuolo and general manager Billy Devaney, the team announced on Monday.
+
+The 52-year-old Spagnuolo was just 10-38 in three seasons in St. Louis after being hired in January 2009. Devaney, 56, was promoted to general manager in December 2008.
+
+Who's next?? And is Spagnuolo that good of a Defensive Coach to now be wanted by everyone?????
+       
+      author="ScreamingMeemie" datetime="2012-01-02T13:09:00" id="p2" 
+1. I don't think Norv is going to make it. I still don't get what everyone sees in him as a head coach.
+       
+      
+
+fileName: AFP_ENG_20100414.0615.xml
+docId: AFP_ENG_20100414.0615
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 137
+length docTagSpaces: 137
+docString length: 1265
+cleanString length: 1265
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/AFP_ENG_20100414.0615.xml
+Document: 
+<DOC id="AFP_ENG_20100414.0615" source_file="/ldc/collections/newswire/daily_process/afp_new/english/received/20100414/028888-01-03.xml">
+<HEADLINE>
+French far-left killer leaves jail
+</HEADLINE>
+<DATELINE>
+ENSISHEIM, France, April 14, 2010 (AFP) -
+</DATELINE>
+<TEXT>
+<P>
+A former militant of the French far-left group Action Directe, Georges Cipriani, left prison on parole on Wednesday after 23 years behind bars for two high-profile murders.
+</P>
+<P>
+A policeman at the scene confirmed to AFP the identity of Cipriani, 59, who left the prison in Ensisheim in northeastern France wearing a leather jacket and with long white hair.
+</P>
+<P>
+Cipriani was one of four members of Action Directe sentenced to life in prison for the murder of Renault chief George Besse in 1986 and the head of government arms sales Rene Audran a year earlier.
+</P>
+<P>
+The four included two women, Joelle Aubron who died of lung cancer in 2006 and Nathalie Menignon, who was paroled in 2008. A fourth member, Jean-Marc Rouillan, remains behind bars.
+</P>
+<P>
+Cipriani left Ensisheim in a police vehicle bound for an open prison near Strasbourg where the police officer said he was due to do community service including working at a food bank as part of his parole.
+</P>
+</TEXT>
+</DOC>
+
+Document: 
+                                                                                                                                         
+          
+French far-left killer leaves jail
+           
+          
+ENSISHEIM, France, April 14, 2010 (AFP) -
+           
+      
+   
+A former militant of the French far-left group Action Directe, Georges Cipriani, left prison on parole on Wednesday after 23 years behind bars for two high-profile murders.
+    
+   
+A policeman at the scene confirmed to AFP the identity of Cipriani, 59, who left the prison in Ensisheim in northeastern France wearing a leather jacket and with long white hair.
+    
+   
+Cipriani was one of four members of Action Directe sentenced to life in prison for the murder of Renault chief George Besse in 1986 and the head of government arms sales Rene Audran a year earlier.
+    
+   
+The four included two women, Joelle Aubron who died of lung cancer in 2006 and Nathalie Menignon, who was paroled in 2008. A fourth member, Jean-Marc Rouillan, remains behind bars.
+    
+   
+Cipriani left Ensisheim in a police vehicle bound for an open prison near Strasbourg where the police officer said he was due to do community service including working at a food bank as part of his parole.
+    
+       
+      
+
+fileName: XIN_ENG_20101125.0137.xml
+docId: XIN_ENG_20101125.0137
+length spaces50: 50
+length spaces500: 500
+endDocTagIndex: 47
+length docTagSpaces: 47
+docString length: 3888
+cleanString length: 3888
+inputFileName: /projects/WebWare9/nhawkins/ealInput/akTestSix/XIN_ENG_20101125.0137.xml
+Document: 
+<DOC id="XIN_ENG_20101125.0137" lang="English">
+<KEYWORD>
+Domestic News Industry economics Africa Kenya-IFC-Insurance
+</KEYWORD>
+<HEADLINE>
+IFC signs deal to expand insurance to farmers in East Africa
+</HEADLINE>
+<TEXT>
+<P>
+IFC signs deal to expand insurance to farmers in East Africa
+</P>
+<P>
+NAIROBI, Nov. 25 (Xinhua) -- International Finance Corporation
+(IFC) has signed agreements with three partners to expand access
+to insurance to thousands of farmers and livestock herders in
+Kenya and Rwanda to help protect their crops, animals and
+livelihoods from weather-related risks and natural disasters.
+</P>
+<P>
+IFC, through the Global Index Insurance Facility (GIIF), will
+confer grants totaling roughly 4.1 million U. S. dollars to the
+Syngenta Foundation for Sustainable Agriculture/UAP Insurance
+weather index insurance initiative in Kenya; the International
+Livestock Research Institute (ILRI) Livestock index insurance
+project in northern Kenya; and the MicroEnsure weather index
+insurance project in Rwanda.   "These partnerships highlight
+IFC's commitment to expanding insurance and other financial
+products where they are needed most in Africa. The Global Index
+Insurance Facility will facilitate farmers' access to credit,
+leading to increased productivity, improved livelihoods and
+greater food security," Jean Philippe Prosper, IFC Director for
+Eastern and Southern Africa said.   "We are grateful to the
+donors that have generously provided funding and to our partners
+for supporting this program."
+</P>
+<P>
+The grants, the first three provided under the GIIF program, will
+help bring weather-related, index-based insurance to about 35,
+000 farmers and 5,000 livestock herders in East Africa over the
+next three years.   "The implementation of these three first GIIF
+projects in Kenya and Rwanda will support the development of new
+insurance products and will increase expertise in this field,
+which will benefit smallholders and livestock keepers affected by
+climatic events," he said.  "In addition to the GIIF, the
+European Union is providing further financing to the ILRI
+Livestock Insurance project in Kenya through the 10th European
+Development Fund, Kenya Rural Development Project that will start
+in 2011."
+</P>
+<P>
+IFC will confer a grant of up to 2.4 million dollars on Syngenta
+Foundation for Sustainable Agriculture, which expects to help
+insure 20,000 farmers in Kenya over the next three years
+</P>
+<P>
+IFC will confer a grant of up to 154,000 dollars on the ILRI,
+which expects to help insure 5,000 livestock herders in northern
+Kenya over the next two years.
+</P>
+<P>
+IFC will confer a grant of up to 1.6 million dollars on
+MicroEnsure, which expects to insure 15,000 farmers in Rwanda
+over the next three years.
+</P>
+<P>
+IFC's GIIF program was established in 2009 to assist the
+development of index-based insurance for natural disasters and
+weather risks in developing countries, where insurance is rarely
+available.
+</P>
+<P>
+The grants will fund advisory activities, including local
+capacity building, infrastructure development, product
+development, and development of local insurance companies'
+capacity to provide index-based insurance products.
+</P>
+<P>
+Index-based insurance insures against catastrophic events, such
+as wind storms or droughts, depending on their severity.
+</P>
+<P>
+Index-linked insurance products eliminate the need for insurance
+companies to individually verify claims, reducing transaction
+costs and making it easier for the products and services to be
+offered to rural communities and in frontier regions.
+</P>
+<P>
+The European Union committed 24.5 million euros as the first
+donor to the GIIF Trust Fund.
+</P>
+<P>
+The fund is also supported by Japan's Ministry of Finance with an
+initial grant of 2 million dollars, and the Dutch Ministry of
+Foreign Affairs, which provided funding to establish the
+facility.
+</P>
+</TEXT>
+</DOC>
+
+Document: 
+                                               
+<KEYWORD 
+Domestic News Industry economics Africa Kenya-IFC-Insurance
+</KEYWORD 
+          
+IFC signs deal to expand insurance to farmers in East Africa
+           
+      
+   
+IFC signs deal to expand insurance to farmers in East Africa
+    
+   
+NAIROBI, Nov. 25 (Xinhua) -- International Finance Corporation
+(IFC) has signed agreements with three partners to expand access
+to insurance to thousands of farmers and livestock herders in
+Kenya and Rwanda to help protect their crops, animals and
+livelihoods from weather-related risks and natural disasters.
+    
+   
+IFC, through the Global Index Insurance Facility (GIIF), will
+confer grants totaling roughly 4.1 million U. S. dollars to the
+Syngenta Foundation for Sustainable Agriculture/UAP Insurance
+weather index insurance initiative in Kenya; the International
+Livestock Research Institute (ILRI) Livestock index insurance
+project in northern Kenya; and the MicroEnsure weather index
+insurance project in Rwanda.   "These partnerships highlight
+IFC's commitment to expanding insurance and other financial
+products where they are needed most in Africa. The Global Index
+Insurance Facility will facilitate farmers' access to credit,
+leading to increased productivity, improved livelihoods and
+greater food security," Jean Philippe Prosper, IFC Director for
+Eastern and Southern Africa said.   "We are grateful to the
+donors that have generously provided funding and to our partners
+for supporting this program."
+    
+   
+The grants, the first three provided under the GIIF program, will
+help bring weather-related, index-based insurance to about 35,
+000 farmers and 5,000 livestock herders in East Africa over the
+next three years.   "The implementation of these three first GIIF
+projects in Kenya and Rwanda will support the development of new
+insurance products and will increase expertise in this field,
+which will benefit smallholders and livestock keepers affected by
+climatic events," he said.  "In addition to the GIIF, the
+European Union is providing further financing to the ILRI
+Livestock Insurance project in Kenya through the 10th European
+Development Fund, Kenya Rural Development Project that will start
+in 2011."
+    
+   
+IFC will confer a grant of up to 2.4 million dollars on Syngenta
+Foundation for Sustainable Agriculture, which expects to help
+insure 20,000 farmers in Kenya over the next three years
+    
+   
+IFC will confer a grant of up to 154,000 dollars on the ILRI,
+which expects to help insure 5,000 livestock herders in northern
+Kenya over the next two years.
+    
+   
+IFC will confer a grant of up to 1.6 million dollars on
+MicroEnsure, which expects to insure 15,000 farmers in Rwanda
+over the next three years.
+    
+   
+IFC's GIIF program was established in 2009 to assist the
+development of index-based insurance for natural disasters and
+weather risks in developing countries, where insurance is rarely
+available.
+    
+   
+The grants will fund advisory activities, including local
+capacity building, infrastructure development, product
+development, and development of local insurance companies'
+capacity to provide index-based insurance products.
+    
+   
+Index-based insurance insures against catastrophic events, such
+as wind storms or droughts, depending on their severity.
+    
+   
+Index-linked insurance products eliminate the need for insurance
+companies to individually verify claims, reducing transaction
+costs and making it easier for the products and services to be
+offered to rural communities and in frontier regions.
+    
+   
+The European Union committed 24.5 million euros as the first
+donor to the GIIF Trust Fund.
+    
+   
+The fund is also supported by Japan's Ministry of Finance with an
+initial grant of 2 million dollars, and the Dutch Ministry of
+Foreign Affairs, which provided funding to establish the
+facility.
+    
+       
+      
+
+Number of input files: 6
+KBPEALApp: num docs 6
+file/homes/gws/nhawkins/kbp2016eal/target/classes/edu/washington/NewsSpikeToKBPEAL2016.csv
+constructor: 62
+KBPEALApp num sentences: 15
+Tuples #: 25
+Tuple: UKRAINE 'S FORCES, move against, PROTESTERS, O, O
+Tuple: This article, be part of, TIMES EXPRESS, O, O
+Tuple: It, be a condensed version of, a story, O, O
+Tuple: a condensed version of a story, will appear in, tomorrow 's New York Times, O, ORGANIZATION
+Tuple: Western officials, grasp for, a way, O, O
+Tuple: an assistant secretary of state, be dispatch in, an effort, O, O
+Tuple: The renewed diplomatic maneuvering, be intend to prevent, a repeat of the, O, O
+Tuple: the widening civil uprising, have plunge, this nation of 46 million, O, NUMBER
+Tuple: Ukraine, face, a severe economic crisis, LOCATION, O
+Tuple: Ukraine, be in, immediate need of an aid package, LOCATION, O
+Tuple: riot police officers, be mass in, the streets, O, O
+Tuple: Nuland, urge, Russia, PERSON, LOCATION
+Tuple: a political solution, stress, Ukraine 's need, O, O
+Tuple: The authorities, seem to lose, control of Kiev, O, LOCATION
+Tuple: Interior Ministry troops, begin, efforts, O, O
+Tuple: Battalions of officers, take up position just outside, the square 's perimeters, O, O
+Tuple: they, have surround, small encampments of protesters, O, O
+Tuple: they, begin clear, those camps, O, O
+Tuple: they, cut off electricity to, the occupied City Hall, O, O
+Tuple: Ukrainian security forces, raid the headquarters of, an opposition party, O, O
+Tuple: the headquarters of an opposition party, seize, computer servers, O, O
+Tuple: The party 's parliamentary leader, be one of, the main organizers of the protest movement, O, O
+Tuple: one of the main organizers of the protest movement, balloon in, recent days, O, DURATION
+Tuple: he, refuse to sign, a political and trade pact, O, O
+100000	410	Mon Jul 11 14:27:29 PDT 2016200000	251	Mon Jul 11 14:27:29 PDT 2016300000	395	Mon Jul 11 14:27:30 PDT 2016400000	205	Mon Jul 11 14:27:30 PDT 2016500000	188	Mon Jul 11 14:27:30 PDT 2016600000	190	Mon Jul 11 14:27:30 PDT 2016700000	182	Mon Jul 11 14:27:30 PDT 2016800000	207	Mon Jul 11 14:27:31 PDT 2016900000	219	Mon Jul 11 14:27:31 PDT 20161000000	188	Mon Jul 11 14:27:31 PDT 20161100000	208	Mon Jul 11 14:27:31 PDT 20161200000	186	Mon Jul 11 14:27:32 PDT 20161300000	183	Mon Jul 11 14:27:32 PDT 20161400000	217	Mon Jul 11 14:27:32 PDT 20161500000	178	Mon Jul 11 14:27:32 PDT 20161600000	184	Mon Jul 11 14:27:32 PDT 20161700000	261	Mon Jul 11 14:27:33 PDT 20161800000	211	Mon Jul 11 14:27:33 PDT 20161900000	180	Mon Jul 11 14:27:33 PDT 20162000000	177	Mon Jul 11 14:27:33 PDT 20162100000	210	Mon Jul 11 14:27:33 PDT 20162200000	429	Mon Jul 11 14:27:34 PDT 20162300000	174	Mon Jul 11 14:27:34 PDT 20162400000	206	Mon Jul 11 14:27:34 PDT 20162500000	175	Mon Jul 11 14:27:34 PDT 20162600000	175	Mon Jul 11 14:27:34 PDT 20162700000	171	Mon Jul 11 14:27:35 PDT 20162800000	204	Mon Jul 11 14:27:35 PDT 20162900000	178	Mon Jul 11 14:27:35 PDT 20163000000	185	Mon Jul 11 14:27:35 PDT 20163100000	207	Mon Jul 11 14:27:35 PDT 20163200000	178	Mon Jul 11 14:27:36 PDT 20163300000	280	Mon Jul 11 14:27:36 PDT 20163400000	189	Mon Jul 11 14:27:36 PDT 20163500000	211	Mon Jul 11 14:27:36 PDT 20163600000	185	Mon Jul 11 14:27:36 PDT 20163700000	193	Mon Jul 11 14:27:37 PDT 20163800000	217	Mon Jul 11 14:27:37 PDT 20163900000	185	Mon Jul 11 14:27:37 PDT 20164000000	436	Mon Jul 11 14:27:37 PDT 20164100000	213	Mon Jul 11 14:27:38 PDT 20164200000	184	Mon Jul 11 14:27:38 PDT 20164300000	181	Mon Jul 11 14:27:38 PDT 20164400000	181	Mon Jul 11 14:27:38 PDT 20164500000	210	Mon Jul 11 14:27:38 PDT 20164600000	185	Mon Jul 11 14:27:39 PDT 20164700000	181	Mon Jul 11 14:27:39 PDT 20164800000	217	Mon Jul 11 14:27:39 PDT 20164900000	181	Mon Jul 11 14:27:39 PDT 20165000000	181	Mon Jul 11 14:27:39 PDT 2016NSPkb relation: urge@/person@/location
+RELATIONS: 1
+arg1: Nuland 1830:1836
+arg2: Russia 1844:1850
+relation: urge@/person@/location
+arg1Type: PERSON
+arg2Type: LOCATION
+confidence: 1.0
+relation: urge@/person@/location
+newsSpikeToTAC2016ETL: 62
+KBPEALApp num sentences: 20
+Tuples #: 35
+Tuple: FORMER JPMORGAN EMPLOYEE, surrender in, ` LONDON WHALE ' CASE EDS, O, O
+Tuple: This article, be part of, TIMES EXPRESS, O, O
+Tuple: It, be a condensed version of, a story, O, O
+Tuple: a condensed version of a story, will appear in, tomorrow 's New York Times, O, ORGANIZATION
+Tuple: the U.S. government, charge, Javier Martin-Artajo, O, PERSON
+Tuple: trading losses, ultimately reach more than, $ 6 billion, O, MONEY
+Tuple: he, have he first day in, court, O, O
+Tuple: he, surrender to, Spanish authorities, O, O
+Tuple: Spanish authorities, could be, a lengthy extradition process, O, O
+Tuple: a Spaniard, work in, the bank 's London office, O, O
+Tuple: a Spaniard, be release soon after, his surrender and arrest, O, O
+Tuple: it, be unclear whether, his passport, O, O
+Tuple: The criminal charges, stem from, a risky bet, O, O
+Tuple: so-called credit derivatives, allow, traders, O, O
+Tuple: Julien Grout, deliberately overstate the value of, their positions, PERSON, O
+Tuple: The two, be charge with, wire fraud, NUMBER, O
+Tuple: Prosecutors, also charge, them, O, O
+Tuple: an episode, leave, a rare, O, O
+Tuple: a rare, stain on, JPMorgan 's once-stellar reputation, O, O
+Tuple: a rare, underscore, the challenge, O, O
+Tuple: U.S. authorities, face in, their pursuit of the traders, O, O
+Tuple: Manhattan, have encounter, logistical hurdles, LOCATION, O
+Tuple: British police, issue a arrest warrant for, Martin-Artajo, O, PERSON
+Tuple: the behest of authorities, then visit he house in, London only, O, O
+Tuple: Martin-Artajo, leave, London, PERSON, LOCATION
+Tuple: Grout, leave, London, O, LOCATION
+Tuple: his native France, typically do not extradite, its citizens, LOCATION, O
+Tuple: his client, also spend a brief period in, the U.S., O, LOCATION
+Tuple: both of the former traders, have indicate through, their lawyers, O, O
+Tuple: they, be open to, extradition, O, O
+Tuple: prosecutors, recommend, bail, O, O
+Tuple: Prosecutors, have not charge, a third trader, O, O
+Tuple: That trader, have reach a deal with, the authorities, O, O
+Tuple: Manhattan, will spare, him, LOCATION, O
+Tuple: he, cooperate against, his two former colleagues, O, O
+100000	233	Mon Jul 11 14:27:48 PDT 2016200000	182	Mon Jul 11 14:27:48 PDT 2016300000	212	Mon Jul 11 14:27:48 PDT 2016400000	212	Mon Jul 11 14:27:49 PDT 2016500000	225	Mon Jul 11 14:27:49 PDT 2016600000	217	Mon Jul 11 14:27:49 PDT 2016700000	219	Mon Jul 11 14:27:49 PDT 2016800000	244	Mon Jul 11 14:27:49 PDT 2016900000	258	Mon Jul 11 14:27:50 PDT 20161000000	219	Mon Jul 11 14:27:50 PDT 20161100000	245	Mon Jul 11 14:27:50 PDT 20161200000	215	Mon Jul 11 14:27:50 PDT 20161300000	194	Mon Jul 11 14:27:51 PDT 20161400000	216	Mon Jul 11 14:27:51 PDT 20161500000	179	Mon Jul 11 14:27:51 PDT 20161600000	287	Mon Jul 11 14:27:51 PDT 20161700000	202	Mon Jul 11 14:27:51 PDT 20161800000	214	Mon Jul 11 14:27:52 PDT 20161900000	183	Mon Jul 11 14:27:52 PDT 20162000000	182	Mon Jul 11 14:27:52 PDT 20162100000	211	Mon Jul 11 14:27:52 PDT 20162200000	199	Mon Jul 11 14:27:52 PDT 20162300000	183	Mon Jul 11 14:27:53 PDT 20162400000	214	Mon Jul 11 14:27:53 PDT 20162500000	183	Mon Jul 11 14:27:53 PDT 20162600000	199	Mon Jul 11 14:27:53 PDT 20162700000	227	Mon Jul 11 14:27:53 PDT 20162800000	258	Mon Jul 11 14:27:54 PDT 20162900000	378	Mon Jul 11 14:27:54 PDT 20163000000	187	Mon Jul 11 14:27:54 PDT 20163100000	208	Mon Jul 11 14:27:55 PDT 20163200000	177	Mon Jul 11 14:27:55 PDT 20163300000	234	Mon Jul 11 14:27:55 PDT 20163400000	189	Mon Jul 11 14:27:55 PDT 20163500000	213	Mon Jul 11 14:27:55 PDT 20163600000	185	Mon Jul 11 14:27:56 PDT 20163700000	192	Mon Jul 11 14:27:56 PDT 20163800000	217	Mon Jul 11 14:27:56 PDT 20163900000	185	Mon Jul 11 14:27:56 PDT 20164000000	190	Mon Jul 11 14:27:56 PDT 20164100000	214	Mon Jul 11 14:27:57 PDT 20164200000	186	Mon Jul 11 14:27:57 PDT 20164300000	389	Mon Jul 11 14:27:57 PDT 20164400000	177	Mon Jul 11 14:27:57 PDT 20164500000	204	Mon Jul 11 14:27:57 PDT 20164600000	178	Mon Jul 11 14:27:58 PDT 20164700000	178	Mon Jul 11 14:27:58 PDT 20164800000	213	Mon Jul 11 14:27:58 PDT 20164900000	178	Mon Jul 11 14:27:58 PDT 20165000000	177	Mon Jul 11 14:27:58 PDT 2016NSPkb relation: leave@/person@/location
+RELATIONS: 1
+arg1: Martin-Artajo 2358:2371
+arg2: London 2377:2383
+relation: leave@/person@/location
+arg1Type: PERSON
+arg2Type: LOCATION
+confidence: 1.0
+relation: leave@/person@/location
+newsSpikeToTAC2016ETL: 62
+KBPEALApp num sentences: 18
+Tuples #: 30
+Tuple: MANDELA, continue, AS FAMILY MEMBERS, PERSON, O
+Tuple: AS FAMILY MEMBERS, hold, EMERGENCY MEETING, O, O
+Tuple: This article, be part of, TIMES EXPRESS, O, O
+Tuple: It, be a condensed version of, a story, O, O
+Tuple: a condensed version of a story, will appear in, tomorrow 's New York Times, O, ORGANIZATION
+Tuple: Singing crowds, gather outside, the hospital, O, O
+Tuple: Nelson Mandela, lay in, a critical state, PERSON, O
+Tuple: family members, hold a emergency meeting at, his ancestral village, O, O
+Tuple: Naplisi Mandela, tell, the South African Press Association, PERSON, ORGANIZATION
+Tuple: a euphemism, widely interpret to mean, preparations, O, O
+Tuple: doctors, continue to treat, Mandela, O, PERSON
+Tuple: he, contract on, Robben Island, O, LOCATION
+Tuple: he, spend much of, his 27 years, O, NUMBER
+Tuple: He, be hospitalize, June 8, O, DATE
+Tuple: President Jacob Zuma, say, Mandela 's condition, PERSON, O
+Tuple: he, visit, Mandela, O, PERSON
+Tuple: his state, have deteriorate from, stable to critical, O, O
+Tuple: Zuma, urge, South Africans, PERSON, LOCATION
+Tuple: people, drop off, cards, O, O
+Tuple: cards, sing, songs, O, O
+Tuple: one group, sing in, the Sotho language, O, O
+Tuple: The emotional scenes, be part of, a perceptible shift, O, O
+Tuple: many South Africans, have avoid talk about, Mandela 's fate, O, O
+Tuple: Mandela, play a central role in, South Africa 's transition, PERSON, O
+Tuple: now many, be openly talk about, the prospect of bidding, O, O
+Tuple: Mandela 's declining condition, come as, President Barack Obama, O, PERSON
+Tuple: the second leg of an African tour, will also take, him, O, O
+Tuple: the South African government, say, a planned meeting, O, O
+100000	197	Mon Jul 11 14:28:02 PDT 2016200000	179	Mon Jul 11 14:28:03 PDT 2016300000	182	Mon Jul 11 14:28:03 PDT 2016400000	212	Mon Jul 11 14:28:03 PDT 2016500000	209	Mon Jul 11 14:28:03 PDT 2016600000	190	Mon Jul 11 14:28:03 PDT 2016700000	191	Mon Jul 11 14:28:04 PDT 2016800000	268	Mon Jul 11 14:28:04 PDT 2016900000	195	Mon Jul 11 14:28:04 PDT 20161000000	185	Mon Jul 11 14:28:04 PDT 20161100000	211	Mon Jul 11 14:28:04 PDT 20161200000	189	Mon Jul 11 14:28:05 PDT 20161300000	185	Mon Jul 11 14:28:05 PDT 20161400000	219	Mon Jul 11 14:28:05 PDT 20161500000	182	Mon Jul 11 14:28:05 PDT 20161600000	188	Mon Jul 11 14:28:05 PDT 20161700000	243	Mon Jul 11 14:28:06 PDT 20161800000	214	Mon Jul 11 14:28:06 PDT 20161900000	182	Mon Jul 11 14:28:06 PDT 20162000000	180	Mon Jul 11 14:28:06 PDT 20162100000	328	Mon Jul 11 14:28:07 PDT 20162200000	185	Mon Jul 11 14:28:07 PDT 20162300000	174	Mon Jul 11 14:28:07 PDT 20162400000	205	Mon Jul 11 14:28:07 PDT 20162500000	175	Mon Jul 11 14:28:07 PDT 20162600000	176	Mon Jul 11 14:28:08 PDT 20162700000	170	Mon Jul 11 14:28:08 PDT 20162800000	203	Mon Jul 11 14:28:08 PDT 20162900000	177	Mon Jul 11 14:28:08 PDT 20163000000	184	Mon Jul 11 14:28:08 PDT 20163100000	206	Mon Jul 11 14:28:08 PDT 20163200000	177	Mon Jul 11 14:28:09 PDT 20163300000	280	Mon Jul 11 14:28:09 PDT 20163400000	358	Mon Jul 11 14:28:09 PDT 20163500000	205	Mon Jul 11 14:28:09 PDT 20163600000	178	Mon Jul 11 14:28:10 PDT 20163700000	186	Mon Jul 11 14:28:10 PDT 20163800000	211	Mon Jul 11 14:28:10 PDT 20163900000	178	Mon Jul 11 14:28:10 PDT 20164000000	177	Mon Jul 11 14:28:10 PDT 20164100000	209	Mon Jul 11 14:28:11 PDT 20164200000	180	Mon Jul 11 14:28:11 PDT 20164300000	176	Mon Jul 11 14:28:11 PDT 20164400000	177	Mon Jul 11 14:28:11 PDT 20164500000	205	Mon Jul 11 14:28:11 PDT 20164600000	179	Mon Jul 11 14:28:12 PDT 20164700000	178	Mon Jul 11 14:28:12 PDT 20164800000	440	Mon Jul 11 14:28:12 PDT 20164900000	177	Mon Jul 11 14:28:12 PDT 20165000000	178	Mon Jul 11 14:28:13 PDT 2016NSPkb relation: urge@/person@/location
+RELATIONS: 1
+arg1: Zuma 1705:1709
+arg2: South Africans 1716:1730
+relation: urge@/person@/location
+arg1Type: PERSON
+arg2Type: LOCATION
+confidence: 1.0
+relation: urge@/person@/location
+newsSpikeToTAC2016ETL: 62
+KBPEALApp num sentences: 8
+Tuples #: 10
+Tuple: The St. Louis Rams, fire, coach Steve Spagnuolo, ORGANIZATION, PERSON
+Tuple: the team, announce on, Monday, O, DATE
+Tuple: The 52-year-old Spagnuolo, be just, 10-38, PERSON, NUMBER
+Tuple: I, do not think, Norv, O, PERSON
+Tuple: Norv, be go to make, it, PERSON, O
+Tuple: I, see in, him, O, O
+100000	193	Mon Jul 11 14:28:15 PDT 2016200000	179	Mon Jul 11 14:28:15 PDT 2016300000	182	Mon Jul 11 14:28:15 PDT 2016400000	234	Mon Jul 11 14:28:16 PDT 2016500000	189	Mon Jul 11 14:28:16 PDT 2016600000	182	Mon Jul 11 14:28:16 PDT 2016700000	183	Mon Jul 11 14:28:16 PDT 2016800000	207	Mon Jul 11 14:28:16 PDT 2016900000	218	Mon Jul 11 14:28:17 PDT 20161000000	182	Mon Jul 11 14:28:17 PDT 20161100000	209	Mon Jul 11 14:28:17 PDT 20161200000	187	Mon Jul 11 14:28:17 PDT 20161300000	184	Mon Jul 11 14:28:17 PDT 20161400000	216	Mon Jul 11 14:28:17 PDT 20161500000	180	Mon Jul 11 14:28:18 PDT 20161600000	284	Mon Jul 11 14:28:18 PDT 20161700000	200	Mon Jul 11 14:28:18 PDT 20161800000	215	Mon Jul 11 14:28:18 PDT 20161900000	183	Mon Jul 11 14:28:19 PDT 20162000000	182	Mon Jul 11 14:28:19 PDT 20162100000	211	Mon Jul 11 14:28:19 PDT 20162200000	193	Mon Jul 11 14:28:19 PDT 20162300000	184	Mon Jul 11 14:28:19 PDT 20162400000	215	Mon Jul 11 14:28:20 PDT 20162500000	184	Mon Jul 11 14:28:20 PDT 20162600000	184	Mon Jul 11 14:28:20 PDT 20162700000	178	Mon Jul 11 14:28:20 PDT 20162800000	212	Mon Jul 11 14:28:20 PDT 20162900000	336	Mon Jul 11 14:28:21 PDT 20163000000	186	Mon Jul 11 14:28:21 PDT 20163100000	208	Mon Jul 11 14:28:21 PDT 20163200000	179	Mon Jul 11 14:28:21 PDT 20163300000	234	Mon Jul 11 14:28:21 PDT 20163400000	190	Mon Jul 11 14:28:22 PDT 20163500000	212	Mon Jul 11 14:28:22 PDT 20163600000	186	Mon Jul 11 14:28:22 PDT 20163700000	193	Mon Jul 11 14:28:22 PDT 20163800000	218	Mon Jul 11 14:28:22 PDT 20163900000	187	Mon Jul 11 14:28:23 PDT 20164000000	184	Mon Jul 11 14:28:23 PDT 20164100000	215	Mon Jul 11 14:28:23 PDT 20164200000	382	Mon Jul 11 14:28:23 PDT 20164300000	176	Mon Jul 11 14:28:24 PDT 20164400000	177	Mon Jul 11 14:28:24 PDT 20164500000	204	Mon Jul 11 14:28:24 PDT 20164600000	179	Mon Jul 11 14:28:24 PDT 20164700000	178	Mon Jul 11 14:28:24 PDT 20164800000	214	Mon Jul 11 14:28:25 PDT 20164900000	178	Mon Jul 11 14:28:25 PDT 20165000000	177	Mon Jul 11 14:28:25 PDT 2016NSPkb relation: fire@/organization@/person
+RELATIONS: 1
+arg1: The St. Louis Rams 357:375
+arg2: coach Steve Spagnuolo 382:403
+relation: fire@/organization@/person
+arg1Type: ORGANIZATION
+arg2Type: PERSON
+confidence: 1.0
+relation: fire@/organization@/person
+newsSpikeToTAC2016ETL: 62
+KBPEALApp num sentences: 6
+Tuples #: 11
+Tuple: French far-left killer, leave, jail ENSISHEIM, O, LOCATION
+Tuple: A former militant of the French far-left group Action Directe, leave, prison, O, O
+Tuple: 59, leave the prison in, Ensisheim, NUMBER, LOCATION
+Tuple: Cipriani, be one of, four members of Action Directe, PERSON, O
+Tuple: The four, include, two women, NUMBER, O
+Tuple: Joelle Aubron, die of, lung cancer, PERSON, O
+Tuple: Nathalie Menignon, be parole in, 2008, PERSON, DATE
+Tuple: A fourth member, remain behind, bars, O, O
+Tuple: Cipriani, leave, Ensisheim, PERSON, LOCATION
+Tuple: a police vehicle, bind for, an open prison, O, O
+Tuple: the police officer, say, he, O, O
+100000	193	Mon Jul 11 14:28:28 PDT 2016200000	245	Mon Jul 11 14:28:28 PDT 2016300000	184	Mon Jul 11 14:28:28 PDT 2016400000	210	Mon Jul 11 14:28:28 PDT 2016500000	210	Mon Jul 11 14:28:29 PDT 2016600000	190	Mon Jul 11 14:28:29 PDT 2016700000	191	Mon Jul 11 14:28:29 PDT 2016800000	213	Mon Jul 11 14:28:29 PDT 2016900000	236	Mon Jul 11 14:28:29 PDT 20161000000	276	Mon Jul 11 14:28:30 PDT 20161100000	223	Mon Jul 11 14:28:30 PDT 20161200000	214	Mon Jul 11 14:28:30 PDT 20161300000	209	Mon Jul 11 14:28:30 PDT 20161400000	209	Mon Jul 11 14:28:30 PDT 20161500000	174	Mon Jul 11 14:28:31 PDT 20161600000	182	Mon Jul 11 14:28:31 PDT 20161700000	267	Mon Jul 11 14:28:31 PDT 20161800000	215	Mon Jul 11 14:28:31 PDT 20161900000	183	Mon Jul 11 14:28:32 PDT 20162000000	181	Mon Jul 11 14:28:32 PDT 20162100000	212	Mon Jul 11 14:28:32 PDT 20162200000	195	Mon Jul 11 14:28:32 PDT 20162300000	305	Mon Jul 11 14:28:32 PDT 20162400000	205	Mon Jul 11 14:28:33 PDT 20162500000	176	Mon Jul 11 14:28:33 PDT 20162600000	176	Mon Jul 11 14:28:33 PDT 20162700000	170	Mon Jul 11 14:28:33 PDT 20162800000	205	Mon Jul 11 14:28:33 PDT 20162900000	198	Mon Jul 11 14:28:34 PDT 20163000000	211	Mon Jul 11 14:28:34 PDT 20163100000	206	Mon Jul 11 14:28:34 PDT 20163200000	178	Mon Jul 11 14:28:34 PDT 20163300000	271	Mon Jul 11 14:28:34 PDT 20163400000	191	Mon Jul 11 14:28:35 PDT 20163500000	212	Mon Jul 11 14:28:35 PDT 20163600000	359	Mon Jul 11 14:28:35 PDT 20163700000	185	Mon Jul 11 14:28:35 PDT 20163800000	210	Mon Jul 11 14:28:36 PDT 20163900000	177	Mon Jul 11 14:28:36 PDT 20164000000	179	Mon Jul 11 14:28:36 PDT 20164100000	208	Mon Jul 11 14:28:36 PDT 20164200000	179	Mon Jul 11 14:28:36 PDT 20164300000	176	Mon Jul 11 14:28:36 PDT 20164400000	182	Mon Jul 11 14:28:37 PDT 20164500000	241	Mon Jul 11 14:28:37 PDT 20164600000	184	Mon Jul 11 14:28:37 PDT 20164700000	189	Mon Jul 11 14:28:37 PDT 20164800000	213	Mon Jul 11 14:28:37 PDT 20164900000	401	Mon Jul 11 14:28:38 PDT 20165000000	177	Mon Jul 11 14:28:38 PDT 2016NSPkb relation: leave@/person@/location
+RELATIONS: 1
+arg1: Cipriani 1039:1047
+arg2: Ensisheim 1053:1062
+relation: leave@/person@/location
+arg1Type: PERSON
+arg2Type: LOCATION
+confidence: 1.0
+relation: leave@/person@/location
+newsSpikeToTAC2016ETL: 62
+KBPEALApp num sentences: 16
+Tuples #: 24
+Tuple: IFC -RRB-, have sign agreement with, three partners, O, O
+Tuple: GIIF, will confer, grants, O, O
+Tuple: These partnerships, highlight, IFC 's commitment, O, O
+Tuple: they, be need most in, Africa, O, LOCATION
+Tuple: The Global Index Insurance Facility, will facilitate, farmers ' access, O, O
+Tuple: credit, improve, livelihoods, O, O
+Tuple: We, be grateful to, the donors, O, O
+Tuple: the donors, have generously provide, funding, O, O
+Tuple: Kenya and Rwanda, will support the development of, new insurance products, LOCATION, O
+Tuple: Kenya and Rwanda, will increase expertise in, this field, LOCATION, O
+Tuple: this field, will benefit, smallholders, O, O
+Tuple: the European Union, be provide further finance to, the ILRI Livestock Insurance project, LOCATION, O
+Tuple: Kenya Rural Development Project, will start in, 2011, O, DATE
+Tuple: IFC, will confer, a grant of up, ORGANIZATION, O
+Tuple: IFC, will confer, a grant of up to 154,000 dollars, ORGANIZATION, MONEY
+Tuple: IFC, will confer, a grant of up to 1.6 million dollars, ORGANIZATION, MONEY
+Tuple: IFC 's GIIF program, be establish in, 2009, O, DATE
+Tuple: The grants, will fund, advisory activities, O, O
+Tuple: Index-based insurance, insure against, catastrophic events, O, O
+Tuple: Index-linked insurance products, eliminate the need for, insurance companies, O, O
+Tuple: The European Union, commit, 24.5 million euros, ORGANIZATION, MONEY
+Tuple: The fund, be also support by, Japan 's Ministry of Finance, O, ORGANIZATION
+Tuple: the Dutch Ministry of Foreign Affairs, provide funding to establish, the facility, ORGANIZATION, O
+100000	248	Mon Jul 11 14:28:43 PDT 2016200000	180	Mon Jul 11 14:28:44 PDT 2016300000	182	Mon Jul 11 14:28:44 PDT 2016400000	210	Mon Jul 11 14:28:44 PDT 2016500000	209	Mon Jul 11 14:28:44 PDT 2016600000	191	Mon Jul 11 14:28:44 PDT 2016700000	193	Mon Jul 11 14:28:45 PDT 2016800000	213	Mon Jul 11 14:28:45 PDT 2016900000	237	Mon Jul 11 14:28:45 PDT 20161000000	188	Mon Jul 11 14:28:45 PDT 20161100000	217	Mon Jul 11 14:28:45 PDT 20161200000	193	Mon Jul 11 14:28:46 PDT 20161300000	273	Mon Jul 11 14:28:46 PDT 20161400000	208	Mon Jul 11 14:28:46 PDT 20161500000	175	Mon Jul 11 14:28:46 PDT 20161600000	180	Mon Jul 11 14:28:46 PDT 20161700000	222	Mon Jul 11 14:28:47 PDT 20161800000	215	Mon Jul 11 14:28:47 PDT 20161900000	185	Mon Jul 11 14:28:47 PDT 20162000000	182	Mon Jul 11 14:28:47 PDT 20162100000	212	Mon Jul 11 14:28:48 PDT 20162200000	193	Mon Jul 11 14:28:48 PDT 20162300000	184	Mon Jul 11 14:28:48 PDT 20162400000	213	Mon Jul 11 14:28:48 PDT 20162500000	185	Mon Jul 11 14:28:48 PDT 20162600000	316	Mon Jul 11 14:28:49 PDT 20162700000	171	Mon Jul 11 14:28:49 PDT 20162800000	202	Mon Jul 11 14:28:49 PDT 20162900000	178	Mon Jul 11 14:28:49 PDT 20163000000	186	Mon Jul 11 14:28:49 PDT 20163100000	207	Mon Jul 11 14:28:50 PDT 20163200000	178	Mon Jul 11 14:28:50 PDT 20163300000	260	Mon Jul 11 14:28:50 PDT 20163400000	189	Mon Jul 11 14:28:50 PDT 20163500000	213	Mon Jul 11 14:28:50 PDT 20163600000	185	Mon Jul 11 14:28:51 PDT 20163700000	193	Mon Jul 11 14:28:51 PDT 20163800000	412	Mon Jul 11 14:28:51 PDT 20163900000	178	Mon Jul 11 14:28:51 PDT 20164000000	177	Mon Jul 11 14:28:52 PDT 20164100000	207	Mon Jul 11 14:28:52 PDT 20164200000	178	Mon Jul 11 14:28:52 PDT 20164300000	177	Mon Jul 11 14:28:52 PDT 20164400000	176	Mon Jul 11 14:28:52 PDT 20164500000	205	Mon Jul 11 14:28:52 PDT 20164600000	179	Mon Jul 11 14:28:53 PDT 20164700000	177	Mon Jul 11 14:28:53 PDT 20164800000	213	Mon Jul 11 14:28:53 PDT 20164900000	176	Mon Jul 11 14:28:53 PDT 20165000000	176	Mon Jul 11 14:28:53 PDT 2016RELATIONS: 0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2:13.848s
+[INFO] Finished at: Mon Jul 11 14:28:53 PDT 2016
+[INFO] Final Memory: 5603M/13013M
+[INFO] ------------------------------------------------------------------------

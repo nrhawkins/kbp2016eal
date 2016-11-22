@@ -18,18 +18,16 @@
 	</properties>
 
 	<dependencies>
-                <dependency>
+                <!-- <dependency>
                         <groupId>edu.washington</groupId>
                         <artifactId>figermodel</artifactId>
                         <version>1</version>
-                </dependency>
-                <dependency>
+                </dependency> -->
+                <!-- <dependency>
                         <groupId>edu.washington</groupId>
                         <artifactId>nsremodel</artifactId>
                         <version>1</version>
-                </dependency>
-
-
+                </dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -141,7 +139,7 @@
                 <dependency>
                         <groupId>com.bbn.kbp.eal</groupId>
                         <artifactId>tac-kbp-eal</artifactId>
-                        <version>3.3.1-SNAPSHOT</version>
+                        <version>3.4.7-SNAPSHOT</version>
                 </dependency>
                 <dependency>
                         <groupId>com.google.apis</groupId>

@@ -1,0 +1,160 @@
+accuse@/location@/location,NONE,NONE,NONE
+accuse@/person@/person,NONE,NONE,NONE
+acknowledge@/person@/time,NONE,NONE,NONE
+acquire@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+acquire@/organization@/person,startposition,startposition.entity,startposition.person
+activate@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+activate@/organization@/person,startposition,startposition.entity,startposition.person
+admit@/person@/person,NONE,NONE,NONE
+agree@/location@/time,NONE,NONE,NONE
+allow@/organization@/organization,NONE,NONE,NONE
+apologize to@/person@/person,correspondence,correspondence.entity,correspondence.entity
+apologize@/person@/time,correspondence,correspondence.entity,correspondence.entity
+approve@/organization@/organization,NONE,NONE,NONE
+arrive in@/person@/location,transportperson,transportperson.person,transportperson.destination
+arrive in@/person@/time,transportperson,transportperson.person,transportperson.destination
+assure@/person@/person,correspondence,correspondence.entity,correspondence.entity
+attend@/person@/organization,studentalum,studentalum.studentalumni,studentalum.org
+beat@/organization@/organization,NONE,NONE,NONE
+beat@/person@/person,NONE,NONE,NONE
+begin@/location@/time,NONE,NONE,NONE
+believe@/person@/person,NONE,NONE,NONE
+buy@/organization@/organization,mergeorg,mergeorg.org,mergeorg.org
+buy@/organization@/organization,transferownership,transferownership.giver,transferownership.beneficiary
+cast as@/person@/person,NONE,NONE,NONE
+challenge@/person@/person,broadcast,broadcast.entity,broadcast.entity
+confirm@/person@/time,NONE,NONE,NONE
+confront@/person@/person,meet,meet.entity,meet.entity
+congratulate@/person@/person,correspondence,correspondence.entity,correspondence.entity
+criticize@/person@/person,broadcast,broadcast.entity,broadcast.entity
+defend@/person@/person,broadcast,broadcast.entity,broadcast.entity
+deny@/organization@/organization,NONE,NONE,NONE
+die at@/person@/number,die,die.victim,NONE
+die in@/person@/location,die,die.victim,die.place
+die in@/person@/time,die,die.victim,die.time
+die@/person@/number,die,die.victim,NONE
+die@/person@/time,die,die.victim,die.time
+dominate@/organization@/organization,NONE,NONE,NONE
+earn@/organization@/money,transfermoney,transfermoney.recipient,transfermoney.money
+earn@/person@/money,transfermoney,transfermoney.recipient,transfermoney.money
+embrace@/person@/person,meet,meet.entity,meet.entity
+end@/location@/time,NONE,NONE,NONE
+engage to@/person@/person,spousalrelationship,spousalrelationship.per,spousalrelationship.per
+engage to@/person@/person,marry,marry.person,marry.person
+enter@/person@/organization,transportperson,transportperson.person,transportperson.destination
+expect@/organization@/person,NONE,NONE,NONE
+extend@/organization@/person,NONE,NONE,NONE
+face up to@/person@/number,NONE,NONE,NONE
+fall to@/organization@/number,NONE,NONE,NONE
+fall@/organization@/percent,NONE,NONE,NONE
+fire@/organization@/person,endposition,endposition.entity,endposition.person
+fire@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+follow@/person@/person,business,business.per,business.per
+grow up in@/person@/location,resident,resident.per,resident.loc
+guide@/person@/organization,leadership,leadership.leader,leadership.entity
+hope@/organization@/person,NONE,NONE,NONE
+host@/organization@/organization,NONE,NONE,NONE
+improve to@/organization@/number,NONE,NONE,NONE
+insist@/person@/person,broadcast,broadcast.entity,broadcast.entity
+insist@/person@/time,broadcast,broadcast.entity,broadcast.entity
+interview@/person@/person,meet,meet.entity,meet.entity
+join@/person@/person,meet,meet.entity,meet.entity
+kill@/person@/person,attack,attack.attacker,attack.target
+kill@/person@/person,die,die.agent,die.victim
+lead@/organization@/number,NONE,NONE,NONE
+lead@/person@/organization,leadership,leadership.leader,leadership.entity
+lead@/person@/person,leadership,leadership.leader,leadership.entity
+leave@/person@/location,transportperson,transportperson.person,transportperson.origin
+leave@/person@/organization,endposition,endposition.person,endposition.entity
+leave@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+live in@/person@/location,resident,resident.per,resident.loc
+lose to@/organization@/organization,NONE,NONE,NONE
+lose to@/person@/person,NONE,NONE,NONE
+lose@/organization@/money,NONE,NONE,NONE
+lose@/organization@/number,NONE,NONE,NONE
+lose@/organization@/person,NONE,NONE,NONE
+love@/person@/person,sentiment,sentiment.source,sentiment.target
+marry in@/person@/location,NONE,NONE,NONE
+marry@/person@/person,spousalrelationship,spousalrelationship.per,spousalrelationship.per
+marry@/person@/person,marry,marry.person,marry.person
+meet in@/location@/location,NONE,NONE,NONE
+meet with@/person@/person,meet,meet.entity,meet.entity
+meet@/organization@/time,meet,meet.entity,meet.entity
+mock@/person@/person,NONE,NONE,NONE
+name@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+nominate@/person@/person,nominate,nominate.agent,nominate.person
+offer@/organization@/money,transfermoney,transfermoney.giver,transfermoney.money
+offer@/organization@/person,transfermoney,transfermoney.giver,transfermoney.recipient
+open up about@/person@/person,broadcast,broadcast.entity,broadcast.entity
+order@/organization@/organization,NONE,NONE,NONE
+pass@/person@/person,NONE,NONE,NONE
+pay tribute to@/person@/person,broadcast,broadcast.entity,broadcast.entity
+pay@/organization@/money,transfermoney,transfermoney.giver,transfermoney.money
+pick up@/person@/ordinal,NONE,NONE,NONE
+place@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+play at@/organization/sports_team@/location,NONE,NONE,NONE
+play@/organization@/organization,NONE,NONE,NONE
+play@/person/actor@/person,NONE,NONE,NONE
+play@/person@/time,NONE,NONE,NONE
+praise@/person@/person,broadcast,broadcast.entity,broadcast.entity
+present@/person@/person,meet,meet.entity,meet.entity
+reach out to@/person@/person,correspondence,correspondence.entity,correspondence.entity
+recall@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+recommend@/organization@/organization,NONE,NONE,NONE
+replace@/person@/person,NONE,NONE,NONE
+report@/organization@/person,NONE,NONE,NONE
+report@/organization@/time,NONE,NONE,NONE
+resign@/person@/time,NONE,NONE,NONE
+retire from@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+return to@/person@/location,transportperson,transportperson.person,transportperson.destination
+return to@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+reunite with@/person@/person,meet,meet.entity,meet.entity
+rise to@/location@/number,NONE,NONE,NONE
+rise@/organization@/percent,NONE,NONE,NONE
+rule@/organization@/time,NONE,NONE,NONE
+run@/person@/organization,leadership,leadership.leader,leadership.entity
+save@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+score for@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+score with@/person@/number,NONE,NONE,NONE
+score@/person@/number,NONE,NONE,NONE
+shake hand with@/person@/person,meet,meet.entity,meet.entity
+shoot@/person@/number,NONE,NONE,NONE
+sign with@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+sign with@/person@/organization,startposition,startposition.person,startposition.entity
+sign@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+sign@/organization@/person,startposition,startposition.entity,startposition.person
+sit down with@/person@/person,meet,meet.entity,meet.entity
+speak at@/person@/organization,broadcast,broadcast.entity,broadcast.entity
+speak in@/person@/location,broadcast,broadcast.entity,broadcast.entity
+speak with@/person@/person,meet,meet.entity,meet.entity
+spend@/person@/time,NONE,NONE,NONE
+split from@/person@/person,NONE,NONE,NONE
+stay in@/person@/location,transportperson,transportperson.person,transportperson.destination
+sue@/organization@/organization,sue,sue.plaintiff,sue.defendant
+suspend@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+talk@/person@/person,correspondence,correspondence.entity,correspondence.entity
+testify before@/person@/organization,NONE,NONE,NONE
+testify on@/person@/location,NONE,NONE,NONE
+testify@/person@/time,NONE,NONE,NONE
+trade@/organization@/person,employmentmembership,employmentmembership.org,employmentmembership.employeemember
+turn@/person@/number,personage,personage.per,personage.age
+unveil@/organization@/product,NONE,NONE,NONE
+urge@/location@/location,NONE,NONE,NONE
+urge@/person@/location,broadcast,broadcast.entity,broadcast.entity
+urge@/person@/organization,broadcast,broadcast.entity,broadcast.entity
+visit@/person@/location,transportperson,transportperson.person,transportperson.destination
+visit@/person@/person,meet,meet.entity,meet.entity
+vote@/organization@/number,elect,elect.place,NONE
+vote@/organization@/time,elect,elect.place,elect.time
+warn@/location@/location,NONE,NONE,NONE
+warn@/person@/location,broadcast,broadcast.entity,broadcast.entity
+warn@/person@/person,correspondence,correspondence.entity,correspondence.entity
+warn@/person@/time,broadcast,broadcast.entity,broadcast.entity
+welcome@/person@/person,meet,meet.entity,meet.entity
+win at@/person@/location,NONE,NONE,NONE
+win@/organization/sports_team@/number,NONE,NONE,NONE
+win@/organization@/time,NONE,NONE,NONE
+win@/person@/award,NONE,NONE,NONE
+withdraw from@/person@/event,NONE,NONE,NONE
+work at@/person@/organization,employmentmembership,employmentmembership.employeemember,employmentmembership.org
+work with@/person@/person,business,business.per,business.per

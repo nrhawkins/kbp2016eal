@@ -1,0 +1,63 @@
+apologize to@/person@/person,Contact.Correspondence,Entity,Entity
+apologize@/person@/time,Contact.Correspondence,Entity,Time
+arrive in@/person@/location,Movement.Transport-Person,Person,Destination
+arrive in@/person@/time,Movement.Transport-Person,Person,Time
+assure@/person@/person,Contact.Correspondence,Entity,Entity
+buy@/organization@/organization,Transaction.Transfer-Ownership,Giver,Beneficiary
+challenge@/person@/person,Contact.Broadcast,Entity,Entity
+confront@/person@/person,Contact.Meet,Entity,Entity
+congratulate@/person@/person,Contact.Correspondence,Entity,Entity
+criticize@/person@/person,Contact.Broadcast,Entity,Entity
+defend@/person@/person,Contact.Broadcast,Entity,Entity
+die in@/person@/location,Life.Die,Victim,Place
+die in@/person@/time,Life.Die,Victim,Time
+die@/person@/time,Life.Die,Victim,Time
+earn@/organization@/money,Transaction.Transfer-Money,Recipient,Money
+earn@/person@/money,Transaction.Transfer-Money,Recipient,Money
+embrace@/person@/person,Contact.Meet,Entity,Entity
+enter@/person@/organization,Movement.Transport-Person,Person,Destination
+fire@/organization@/person,Personnel.End-Position,Entity,Person
+insist@/person@/person,Contact.Broadcast,Entity,Entity
+insist@/person@/time,Contact.Broadcast,Entity,Time
+interview@/person@/person,Contact.Meet,Entity,Entity
+join@/person@/person,Contact.Meet,Entity,Entity
+kill@/person@/person,Conflict.Attack,Attacker,Target
+kill@/person@/person,Life.Die,Agent,Victim
+leave@/person@/location,Movement.Transport-Person,Person,Origin
+leave@/person@/organization,Personnel.End-Position,Person,Entity
+lose@/organization@/person,Personnel.End-Position,Entity,Person
+meet in@/location@/location,Contact.Meet,Entity,Entity
+meet with@/person@/person,Contact.Meet,Entity,Entity
+meet@/organization@/time,Contact.Meet,Entity,Time
+offer@/organization@/money,Transaction.Transfer-Money,Giver,Money
+offer@/organization@/person,Transaction.Transfer-Money,Giver,Recipient
+open up about@/person@/person,Contact.Broadcast,Entity,Entity
+pay tribute to@/person@/person,Contact.Broadcast,Entity,Entity
+pay@/organization@/money,Transaction.Transfer-Money,Giver,Money
+praise@/person@/person,Contact.Broadcast,Entity,Entity
+present@/person@/person,Contact.Meet,Entity,Entity
+reach out to@/person@/person,Contact.Correspondence,Entity,Entity
+retire from@/person@/organization,Personnel.End-Position,Person,Entity
+return to@/person@/location,Movement.Transport-Person,Person,Destination
+return to@/person@/organization,Personnel.Start-Position,Person,Entity
+reunite with@/person@/person,Contact.Meet,Entity,Entity
+shake hand with@/person@/person,Contact.Meet,Entity,Entity
+sign with@/person@/organization,Personnel.Start-Position,Person,Entity
+sign@/organization@/person,Personnel.Start-Position,Entity,Person
+sit down with@/person@/person,Contact.Meet,Entity,Entity
+speak at@/person@/organization,Contact.Broadcast,Entity,Audience
+speak in@/person@/location,Contact.Broadcast,Entity,Entity
+speak with@/person@/person,Contact.Meet,Entity,Entity
+stay in@/person@/location,Movement.Transport-Person,Person,Destination
+talk@/person@/person,Contact.Correspondence,Entity,Entity
+trade@/organization@/person,Personnel.End-Position,Entity,Person
+urge@/location@/location,Contact.Broadcast,Entity,Entity
+urge@/person@/location,Contact.Broadcast,Entity,Entity
+urge@/person@/organization,Contact.Broadcast,Entity,Entity
+visit@/person@/location,Movement.Transport-Person,Person,Destination
+visit@/person@/person,Contact.Meet,Entity,Entity
+warn@/location@/location,Contact.Broadcast,Entity,Entity
+warn@/person@/location,Contact.Broadcast,Entity,Entity
+warn@/person@/person,Contact.Correspondence,Entity,Entity
+warn@/person@/time,Contact.Broadcast,Entity,Time
+welcome@/person@/person,Contact.Meet,Entity,Entity
