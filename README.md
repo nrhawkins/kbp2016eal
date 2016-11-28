@@ -6,3 +6,4 @@ This project requires two models, which can be obtained from project NewsSpikeRe
 
 2. /src/main/resources/edu/washington/nsre/util/model
 
+Two BBN repositories are required to be installed to write the output: bue-common-open and tac-kbp-eal
